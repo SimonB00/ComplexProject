@@ -1,7 +1,10 @@
 -Trattazione teorica
+-Chaos
+-Oscillazione forzata
 -Applicazioni
 -Casi particolari, come quello senza smorzamento
 -Codice risolutivo, con simulazione dei casi particolari
+-Più valori di mu
 -Grafico delle soluzioni del codice
 -Esperimento elettronico
 -Forse: Trattazione hamiltoniana
