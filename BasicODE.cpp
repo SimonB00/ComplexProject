@@ -126,7 +126,7 @@ void second_1(double x0, double y0, double dt, double T) {        // x'' + x'x =
     outfile.close();
 }
 
-void second_2(double x0, double y0, double dt, double T) {        // x'' + x' + x = 0, y = x'
+void second_2(double x0, double y0, double dt, double T) {        // x'' + x'x + x = 0, y = x'
     double steps = T/dt;
     double x = x0;
     double y = y0;
@@ -144,7 +144,7 @@ void second_2(double x0, double y0, double dt, double T) {        // x'' + x' + 
     outfile.close();
 }
 
-void VDP(double x0, double y0, double dt, double mu, double T) {        // x'' + x' + x = 0, y = x'
+void VDP(double x0, double y0, double dt, double mu, double T) {        // x'' + mu(1-x^2)x' + x = 0, y = x'
     double steps = T/dt;
     double x = x0;
     double y = y0;
@@ -154,7 +154,7 @@ void VDP(double x0, double y0, double dt, double mu, double T) {        // x'' +
 
     for(int i = 0; i != steps; ++i) {
         z = x + y*dt;
-        y = (mu*(1-x^2)*y - x)*dt + y;
+        y = (mu*(1-pow(x,2))*y - x)*dt + y;
         x = z;
 
         outfile << x << '\t' << y << '\n';
