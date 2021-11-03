@@ -108,6 +108,60 @@ void osc_damp(double x0, double y0, double dt, double T) {        // x'' + x' + 
     outfile.close();
 }
 
+void second_1(double x0, double y0, double dt, double T) {        // x'' + x'x = 0, y = x'
+    double steps = T/dt;
+    double x = x0;
+    double y = y0;
+    double z;
+    std::ofstream outfile;
+    outfile.open("osc_damp");
+
+    for(int i = 0; i != steps; ++i) {
+        z = x + y*dt;
+        y = y - x*y*dt;
+        x = z;
+
+        outfile << x << '\n';
+    }
+    outfile.close();
+}
+
+void second_2(double x0, double y0, double dt, double T) {        // x'' + x' + x = 0, y = x'
+    double steps = T/dt;
+    double x = x0;
+    double y = y0;
+    double z;
+    std::ofstream outfile;
+    outfile.open("osc_damp");
+
+    for(int i = 0; i != steps; ++i) {
+        z = x + y*dt;
+        y = -x(1+y)*dt + y;
+        x = z;
+
+        outfile << x << '\n';
+    }
+    outfile.close();
+}
+
+void VDP(double x0, double y0, double dt, double mu, double T) {        // x'' + x' + x = 0, y = x'
+    double steps = T/dt;
+    double x = x0;
+    double y = y0;
+    double z;
+    std::ofstream outfile;
+    outfile.open("osc_damp");
+
+    for(int i = 0; i != steps; ++i) {
+        z = x + y*dt;
+        y = (mu*(1-x^2)*y - x)*dt + y;
+        x = z;
+
+        outfile << x << '\t' << y << '\n';
+    }
+    outfile.close();
+}
+
 int main() {
     osc_damp(1,0,0.01,15);
 }
