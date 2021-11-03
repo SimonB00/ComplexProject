@@ -1,0 +1,7 @@
+-Trattazione teorica
+-Applicazioni
+-Casi particolari, come quello senza smorzamento
+-Codice risolutivo, con simulazione dei casi particolari
+-Grafico delle soluzioni del codice
+-Esperimento elettronico
+-Forse: Trattazione hamiltoniana
