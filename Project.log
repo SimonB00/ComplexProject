@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.8)  3 NOV 2021 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.8)  22 NOV 2021 15:07
 entering extended mode
 **./Project.tex
 (Project.tex
@@ -646,7 +646,7 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 ("C:\Program Files\MiKTeX 2.9\tex/latex/fundus-calligra\calligra.sty"
 Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 )
-No file Project.aux.
+(Project.aux)
 \openout1 = `Project.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -663,6 +663,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -671,15 +672,15 @@ LaTeX Font Info:    ... okay on input line 61.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(46.97505pt, 520.3449pt, 46.97505pt)
-* v-part:(T,H,B)=(46.97505pt, 701.01988pt, 46.97505pt)
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=520.3449pt
-* \textheight=701.01988pt
-* \oddsidemargin=-25.29494pt
-* \evensidemargin=-25.29494pt
-* \topmargin=-62.29494pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -732,23 +733,104 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<Spazio delle fasi oscillatore.jpg, id=4, 844.15375pt x 583.17876pt>
+File: Spazio delle fasi oscillatore.jpg Graphic file (type jpg)
+<use Spazio delle fasi oscillatore.jpg>
+Package pdftex.def Info: Spazio delle fasi oscillatore.jpg  used on input line 
+73.
+(pdftex.def)             Requested size: 422.07584pt x 291.58867pt.
+ [1
 
-{C:/Users/lenovo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Project.a
-ux) ) 
+{C:/Users/lenovo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Spazio d
+elle fasi oscillatore.jpg>]
+Missing character: There is no ; in font nullfont!
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+<Traiettorie.jpg, id=23, 522.753pt x 248.127pt>
+File: Traiettorie.jpg Graphic file (type jpg)
+<use Traiettorie.jpg>
+Package pdftex.def Info: Traiettorie.jpg  used on input line 178.
+(pdftex.def)             Requested size: 365.9246pt x 173.6877pt.
+<Vari smorzamenti.png, id=24, 217.5327pt x 284.0211pt>
+File: Vari smorzamenti.png Graphic file (type png)
+<use Vari smorzamenti.png>
+Package pdftex.def Info: Vari smorzamenti.png  used on input line 183.
+(pdftex.def)             Requested size: 217.53215pt x 284.0204pt.
+
+Overfull \hbox (5.66217pt too wide) in paragraph at lines 186--187
+\OT1/cmr/m/n/12 L'oscillatore di Van Der Pol e stato ideato orig-i-nar-i-a-men
+te dall'ingegnere elet-trico olan-dese Balthasar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+[4 <./Traiettorie.jpg> <./Vari smorzamenti.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--210
+
+ []
+
+<mu1-5.png, id=30, 1153.911pt x 591.4095pt>
+File: mu1-5.png Graphic file (type png)
+<use mu1-5.png>
+Package pdftex.def Info: mu1-5.png  used on input line 212.
+(pdftex.def)             Requested size: 461.55623pt x 236.5596pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Andamento temporale.png, id=31, 1153.911pt x 591.4095pt>
+File: Andamento temporale.png Graphic file (type png)
+<use Andamento temporale.png>
+Package pdftex.def Info: Andamento temporale.png  used on input line 218.
+(pdftex.def)             Requested size: 438.49074pt x 224.73795pt.
+[5]
+<mu123.png, id=35, 1153.911pt x 591.4095pt>
+File: mu123.png Graphic file (type png)
+<use mu123.png>
+Package pdftex.def Info: mu123.png  used on input line 222.
+(pdftex.def)             Requested size: 461.55623pt x 236.5596pt.
+ [6 <./mu1-5.png (PNG copy)> <./Andamento temporale.png (PNG copy)>]
+[7 <./mu123.png (PNG copy)>] (Project.aux) ) 
 Here is how much of TeX's memory you used:
- 25152 strings out of 481556
- 623299 string characters out of 2923632
- 963068 words of memory out of 3000000
- 39986 multiletter control sequences out of 15000+200000
- 535534 words of font info for 37 fonts, out of 3000000 for 9000
+ 25801 strings out of 481556
+ 640146 string characters out of 2923632
+ 1017978 words of memory out of 3000000
+ 40620 multiletter control sequences out of 15000+200000
+ 541101 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,6n,98p,727b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Project.pdf (1 page, 22122 bytes).
+ 68i,9n,98p,727b,2196s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Project.pdf (7 pages, 724585 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
