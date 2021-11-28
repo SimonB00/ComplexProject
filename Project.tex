@@ -22,6 +22,11 @@
 \usepackage{dsfont}
 \usepackage{calligra}
 %\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage[miktex]{gnuplottex}
+\usepackage{epstopdf}
+\usepackage[italian]{babel}
+\usepackage{float}
 
 
 \newcommand{\vv}{\vec{v}}
@@ -100,28 +105,19 @@ Studiamo il caso $\dot{x} = 0$, che risulta in
 	w(x) = \mu F(x) = \mu\left(\frac{1}{3}x^3-x\right)
 \end{equation}
 e si ottiene quindi una cubica. Studiamo quindi il grafico di questa funzione: 
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-	axis y line = center,
-	axis x line = middle,
-	xlabel = \( x \),
-	ylabel = \( w \),
-	width = 14cm,
-	height = 10cm,
-]
-\addplot[
-	domain = -2.5:2.5,
-	samples = 150,
-	color = black,
-] {(1/3)*x^3-x};
-\addplot[mark=*] coordinates {(2,2/3)} node[pin={$A$}]{};
-\addplot[mark=*] coordinates {(-2,-2/3)} node[pin=180:{$C$}]{};
-\addplot[mark=*] coordinates {(-1,2/3)} node[pin={$D$}]{};
-\addplot[mark=*] coordinates {(1,-2/3)} node[pin=270:{$B$}]{};
-\end{axis};
-\end{tikzpicture}
-\end{center}
+\begin{figure}[H]
+    \centering
+    \begin{gnuplot}[terminal = epslatex, terminaloptions = color, terminaloptions = {size 17cm,13cm}]
+        set xrange [-3:3]
+        set yrange [-2.5:2.5]
+        set key top left
+        set key box opaque
+        set key spacing 1.5
+        
+        plot (x*x*x)/3 -x title "F(x)" lc 7 lw 2.5, "VecField.dat" using 1:2:($3/50):($4) w vectors title "Campo vettoriale" lc 8 lw 0.5
+    \end{gnuplot}
+    \caption{Caption}
+\end{figure}
 Vediamo che $\dot{w} = 0$ solo per $x=0$, ovvero quando siamo sull'asse delle $y$, e si trova in particolare che sopra l'asse delle $x$ i vettori del campo vettoriale puntano a destra, mentre sotto l'asse delle $x$ puntano a sinistra. Il punto di massimo locale della funzione è $\left(-1,\frac{2}{3}\mu\right)$, mentre il punto di minimo locale è $\left(1,-\frac{2}{3}\mu\right)$. In più vediamo che i punti di intersezione tra le orizzontali che passano per i punti di massimo e minimo con la curva $w$ sono rispettivamente $\left(2,\frac{2}{3}\mu\right)$ $\left(-2,-\frac{2}{3}\mu\right)$. \\
 Se consideriamo valori di $\mu$ molto più grandi di 1, vediamo che sarebbe ragionevole riscalare di nuovo le variabili:
 \begin{equation}
@@ -133,7 +129,7 @@ Se consideriamo valori di $\mu$ molto più grandi di 1, vediamo che sarebbe ragi
 Così si ottiene un grafico uguale a quello di prima ma senza i valori di $\mu$. \\
 Fuori dalla curva $\dot{x} = 0$ si ha che $\dot{x}$ è molto grande, mentre $\dot{y}$ è quasi nullo. Questo vuole dire che se mettiamo una particella fuori dalla curva, questa verrà spostata orizzontalmente molto velocemente fino a posizionarsi sulla curva, e subirà anche una piccola accelerazione verticale nella direzione verso la curva. A questo punto la particella si muoverà lentamente sulla curva fino a uno dei vue punti critici, e una volta raggiunti accelererà molto velocemente fino al secondo, in corrispondenza del quale si muoverà molto più lentamente. \\
 Si ottiene così un ciclo limite in cui la velocità della particella varia continuamente. In particolare notiamo che più il valore di $\mu$ è grande, più la curva si muoverà lentamente vicino ai punti di minimo/massimo e velocemente lontano da essi. Questo spiega la forma delle traiettorie viste nelle figure $$ a $$ e sarà inoltre dimostrato visivamente con delle animazioni.
-\paragraph{Studio della stabilità \\}
+\subsubsection{Studio della stabilità}
 Per studiare la stabilità dell'oscillatore di Van Der Pol e la dipendenza della stessa dalla costante di smorzamento $\mu$, si usa il metodo di Lyapunov: \\ \\
 \textbf{Primo teorema di Lyapunov: \\}
 Per un sistema descritto da un'equazione del tipo 
@@ -186,9 +182,9 @@ Come accennato in precedenza, nel caso particolare in cui $\mu = 0$, il sistema 
 L'oscillatore di Van Der Pol è stato ideato originariamente dall'ingegnere elettrico olandese Balthasar Van Der Pol. Van Der Pol scoprì delle oscillazioni stabili, che in seguito chiamò rilassamento-oscillazioni e che sono un tipo ci ciclo limite nei circuiti elettrici che utilizzano i vacuum tubes. \\
 
 \subsection{Applicazioni}
-\paragraph{Applicazioni ingegneristiche \\}
-\paragraph{Il neurone \\}
-\paragraph{Il modello di Fitzhugh-Nagumo \\}
+\subsubsection{Applicazioni ingegneristiche \\}
+\subsubsection{Il neurone \\}
+\subsubsection{Il modello di Fitzhugh-Nagumo \\}
 \subsection{Varianti: L'oscillatore di Van Der Pol forzato}
 
 \section{Soluzione numerica e simulazione}
@@ -199,7 +195,7 @@ Per risolvere l'equazione differenziale dell'oscillatore è stato scritto un cod
 	y_{n+1} = y_n + \left(\mu(1-x_n^2)y_n - x_n\right)\Delta
 	\end{cases}
 \end{equation} 
-Sulla base di questo sistema di equazioni discretizzate è stato quindi scritto il seguente codice: \\ \\ \\
+Sulla base di queste equazioni discretizzate è stato scritto il codice, che per comodità è stato riportato nell'appendice in fondo al documento. \\ \\ 
 Come di vede, questo codice prende come parametri di entrata le coordinate iniziali $x_0$ e $y_0$, il parametro di smorzamento $\mu$ e lo step temporale $\Delta$. L'ultimo parametro è il tempo $t$, e scegliendo questo valore si ottengono i valori della $x$ per ogni istante temporale precedente al $t$ scelto. \\
 Mediante questo codice vogliamo osservare certe caratteristiche dell'oscillatore: \\
 1) Vogliamo osservare la traiettoria caratteristica di un punto nello spazio delle fasi. \\
@@ -207,23 +203,100 @@ Mediante questo codice vogliamo osservare certe caratteristiche dell'oscillatore
 3) Vogliamo osservare un comportamento particolare del modello di Van Der Pol, ovvero che se prendiamo un insieme di tanti punti distribuiti in modo casuale nello spazio delle fasi, dopo poche iterazioni questi seguono tutti la stessa traiettoria, che è quindi una curva attrattrice. \\
 4) Vogliamo infine osservare l'andamento temporale della posizione $x$ della particella. \\
 Partiamo dal primo obiettivo, ovvero la traiettoria carattestistica: 
-\begin{center}
-	\begin{figure}[h]
-		\includegraphics[scale=0.4]{mu1-5}
-	\caption{Traiettoria nello spazio delle fasi di un oscillatore di Van Der Pol non forzato, smorzato con costante di smorzamento $\mu = 1.5$. L'asse orizzontale rappresenta la posizione mentre quello verticale rappresenta la quantità di moto.}
-	\end{figure}
-\end{center}
-Nella figura soprastante si 
-\begin{center}
-	\includegraphics[scale=0.38]{Andamento temporale}
-\end{center}
+\begin{figure}[H]
+    \centering
+    \begin{gnuplot}[terminal=epslatex, terminaloptions=color, terminaloptions={size 14cm, 12cm}]
+        set xlabel "x"
+        set ylabel "p"
+        set key top left
+        set key box
+        set key spacing 1.5
+        set grid
 
-\begin{center}
-	\includegraphics[scale=0.4]{mu123}
-\end{center}
+        plot "VDP15.dat" title "µ = 1.5" pt 7 lc 2
+    \end{gnuplot}
+\end{figure}
+Nella figura soprastante si può vedere la traiettoria caratteristica dell'oscillatore di Van Der Pol. Come è stato spiegato nelle sezioni precedenti, la velocità del punto che si muove secondo questa traiettoria non è affatto costante.
+Come si può notare dall'animazione infatti, il punto si muove molto più velocemente nei lati corti della traiettoria e più lentamente nei lati lunghi. Si avrà quindi un accumulo di punti in corrispondenza dei punti in cui il momento cambia segno,
+che nel grafico soprastante si trovano in corrispondenza dei punti $(-2,0)$ e $(2,0)$ approssimativamente. \\
+Nell'immagine sottostante si può vedere uno degli ultimi frame dell'animazione citata in precedenza e si vede chiaramente che nei lati corti si hanno degli accumuli di punti, mentre lungo i lati lunghi i punti si distribuiscono in maniera molto meno densa. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{Frame animazione}
+\end{figure}
+Vogliamo ora confrontare le traiettorie di particelle aventi stesse coordinate iniziali ma diverse costanti di smorzamento. \\
+Ci aspettiamo che il grafico ottenuto dalla simulazione numerica sia simile a quello visto in figura $$ afads $$. Dalla simulazione si ottiene il seguente grafico:
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal = epslatex, terminaloptions = color, terminaloptions = {size 12cm,18cm}]
+		set key top left
+		set key box
+		set key spacing 1.5
+		set grid
+		set ytics -6,1,6
+		set yrange [-5.5:5.5]
+    
+		plot "VDP1.dat" title "µ = 1" pt 7 lc 2, "VDP2.dat" title "µ = 2" pt 7 lc 22, "VDP3.dat" title "µ = 3" pt 7 lc 4
+	\end{gnuplot}
+\end{figure}
+che riporta l'andamento atteso. Studiamo questo grafico: \\
+La cosa principale che si nota è che, con l'aumentare del valore di $\mu$, la traiettoria si allunga e assume una forma pià angolata. Il motivo di questo comportamento è stato spiegato nella sezione precedente e deriva dallo studio dell'equazione differenziale. \\
+Vogliamo ora considerare le traiettorie in corrispondenza di valori piccoli di $\mu$.
+\begin{figure}[H]
+    \centering
+    \begin{gnuplot}[terminal=epslatex, terminaloptions=color, terminaloptions={size 15cm, 15cm}]
+		set xlabel "x"
+		set ylabel "p"
+		set key top left
+		set key box
+		set key spacing 1.5
+		set grid
+
+		plot "VDP-05.dat" title "µ = -0.5" pt 7 lc 3
+    \end{gnuplot}
+    \caption{Grafico ottenuto con $\mu = -0.5$}
+\end{figure}
+Nel grafico soprastante si vede che la particella parte vicino all'origine e viene attratta verso essa, percorrendo quindi delle orbite che degenerano fino a collassare in un punto.
+Vogliamo ora studiare un comportamento molto interessante di questo tipo di oscillatore che è stato accennato nelle pagine precedenti. \\
+Consideriamo una situazioni iniziale come quella nel grafico seguente
+\begin{figure}[H]
+    \centering
+    \begin{gnuplot}[terminal=epslatex, terminaloptions=color, terminaloptions={size 15cm, 15cm}]
+    set xlabel "x"
+    set ylabel "p"
+    unset key
+    set grid
+    set xrange [-2:2]
+    set yrange [-2:2]
+
+    plot "Animazione_frame_1.dat" pt 7 lc 7
+    \end{gnuplot}
+    \caption{Frame iniziale dell'animazione.}
+\end{figure}
+quindi una situazione in cui abbiamo un grande numero di punti (in questo caso ne sono stati plottati 300) che sono distribuiti randomicamente nello spazio delle fasi, quindi con momento iniziale e coordinata $x$ iniziale randomici. \\
+Se lasciamo partire questi punti, sembra inizialmente che questi si muovano in modo caotico, ma dopo una decina di iterazioni si vede che le particelle stanno in realtà andando a formare una stessa traiettoria, che è la traiettoria caratteristica dell'oscillatore di Van Der Pol. \\
+In base alla loro posizione iniziale i punti ci metteranno più o meno tempo a posizionarsi su questa curva, ma dopo un numero sufficientemente grande di iterazioni (nella simulazione considerata sono servite circa 350 iterazioni) tutti i punti si saranno posizionati sulla curva. \\
+Questo comportamento peculiare è un'altra dimostrazione del fatto che la traiettoria dell'oscillatore di Van Der Pol sia una curva attrattiva. \\ \\
+Infine si vuole studiare l'andamento temporale della $x$.
+\begin{figure}[h]
+    \centering
+    \begin{gnuplot}[terminal = epslatex, terminaloptions = color, terminaloptions = {size 18cm,12cm}]
+        set key box opaque
+        set grid 
+        set key spacing 1.5
+        set xlabel "t"
+        set ylabel "x(t)"
+        set ylabel offset 1
+        
+        plot "AndTemp.dat" title "Andamento temporale" pt 7 lc 22
+    \end{gnuplot}
+    \caption{Grafico che mostra l'andamento temporale delle oscillazioni della grandezza $x(t)$.}
+\end{figure}
+Nella figura soprastante si vede che l'andamento della $x$ ricorda vagamente una sinusoide, per la periodicità, ma ha una forma molto più aguzza. Si nota inoltre che la forma della funzione tra un punto di minimo e un punto di massimo e viceverda mantiene la stessa forma, ma risulta capovolta. \\
+La forma di queste oscillazioni cambia molto con il valore della costante di smorzamento. Infatti si trova che per valori più piccoli di $\mu$ le oscillazioni hanno una forma più aguzza, mentre per valori grandi (da circa 5 in su)l'andamento ha una forma più squadrata. \\
+Per rendere l'idea in un modo tutt'altro che rigoroso, per valori piccoli di $\mu$ l'andamento ha una forma che ricorda il dente di un lupo, mentre per valori grandi ha una forma che ricorda il dente di uno squalo. \\ \\ 
+Questo è l'andamento temporale nel caso dell'oscillatore non forzato. \\
+Per un oscillatore forzato si troverebbe un andamento vagamente simile a questo, ma con una forma molto più irregolare. Questo è dovuto al fatto che in un'oscillatore del genere, una forzante periodica producerebbe una caoticità, che renderebbe quindi molto più imprevedibile la traiettoria.
 \section{Circuito elettronico}
-
-\section{Trattazione hamiltoniana}
-
 
 \end{document}
