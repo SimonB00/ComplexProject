@@ -114,7 +114,7 @@ e si ottiene quindi una cubica. Studiamo quindi il grafico di questa funzione:
         set key box opaque
         set key spacing 1.5
         
-        plot (x*x*x)/3 -x title "F(x)" lc 7 lw 2.5, "VecField.dat" using 1:2:($3/50):($4) w vectors title "Campo vettoriale" lc 8 lw 0.5
+        plot (x*x*x)/3 -x title "F(x)" lc 7 lw 2.5, "VecField.dat" using 1:2:($3/50):($4/2) w vectors title "Campo vettoriale" lc 8 lw 0.5
     \end{gnuplot}
     \caption{Caption}
 \end{figure}
@@ -180,11 +180,37 @@ Come accennato in precedenza, nel caso particolare in cui $\mu = 0$, il sistema 
 \end{center}
 \subsection{Storia}
 L'oscillatore di Van Der Pol è stato ideato originariamente dall'ingegnere elettrico olandese Balthasar Van Der Pol. Van Der Pol scoprì delle oscillazioni stabili, che in seguito chiamò rilassamento-oscillazioni e che sono un tipo ci ciclo limite nei circuiti elettrici che utilizzano i vacuum tubes. \\
-
+Quando questi circuiti venivano portati vicino al ciclo limite, questi diventavano sincronizzati, ovvero il segnale portante trasportava con se anche la corrente. \\
+Van Der Pol e i suoi colleghi scoprirono inoltre che a certe frequenze si sentiva un rumore irregolare, che più avanti verrà attribuito al caos deterministico. 
 \subsection{Applicazioni}
-\subsubsection{Applicazioni ingegneristiche \\}
-\subsubsection{Il neurone \\}
-\subsubsection{Il modello di Fitzhugh-Nagumo \\}
+\subsubsection{Applicazioni ingegneristiche }
+\subsubsection{Il neurone}
+\subsubsection{Il modello di Fitzhugh-Nagumo }
+Il modello di FitzHugh-Nagumo è un modello che descrive il prototipo di un sistema eccitabile, ad esempio un neurone. \\
+Questo modello fornisce un ulteriore esempio delle "relaxation-oscillations", perchè se lo stimolo esterno supera un certo valore di soglia, il sistema esibirà una certa traiettoria nello spazio delle fasi prima che le variabili tornino ai valori iniziali. \\
+Le equazioni che descrivono il modello sono:
+\begin{equation}
+	\begin{cases}
+		\dot{v} = v - \dfrac{v^3}{3} - w + RI_{ext} \\
+		\tau \dot{w} = v + a - bw
+	\end{cases}
+\end{equation}
+dove $v$ è il potenziale di membrava, $w$ è la variabile di recupero e $I_{ext}$ è il modulo dell'impulso esterno. \\
+La tensione di membrana $v$ è una variabile non lineare, che permette auto-eccitazioni mediante un feedback positivo, mentre $w$ è una variabile di recupero, avente dinamica non lineare che produce un feedback negativo più lento. \\
+Un'importanze differenza tra queste due variabili è quindi il fatto che la $v$ abbia una dinamica veloce, mentre la dinamica di $w$ è molto più lenta. \\
+E' possibile astrarre il modello "nascondendo" l'andamento non lineare della $v$ dentro una funzione $f(v)$, che è un generico polinomio di terzo grado:
+\begin{equation}
+	\begin{cases}
+		\dot{v} = f(v) - w + I_{ext} \\
+		\dot{w} = a(bV - cW)
+	\end{cases}
+\end{equation} 
+dove $a$, $b$ e $c$ sono parametri costanti. \\
+FitzHugh modificò il modello di Van Der Pol per spiegare proprietà basilari di eccitabilità esibite nelle equazioni di Hodkin-Huxley. Le nullcline nell'oscillatore di Van Der Pol erano una retta vertiale e una cubica, che si intersecavano in un singolo punto che era sempre instabile. \\
+In modo da rappresentare un vero neurone, questo nuovo modello deve avere un punto critico che sia stabile, e deve anche presentare un fenomeno di soglia per un cambio di parametro che dovrebbe ricordare una stimolazione di corrente. Si può ottenere l'aggiunta di questo punto stabile aggiungendo un termine lineare $cW$ alla seconda equazione $$a$$ (in realtà si otterrebbe lo stesso effetto aggiungendo un'altro termine lineare nella prima equazione). \\
+Il termine costante $c$ serve per assicurarsi che il punto critico, in condizioni di stimolazione nulla ($I_{ext} = 0$), stia sul ramo ascendente e sia stabile. \\
+La dinamica di questo sistema si può immaginare come una particella che salta a destra e a sinistra dei rami della cubica. \\ \\
+Questo modello è una versione semplificata in 2D del modello di Hodgkin-Huxley, che modella in dettaglio la dinamica di attivazione e disattivazione di un neurone. Tale modello è più realistico e accurato del modello di Fitzhugh-Nagumo, ma essendo un modello con traiettorie di fase quadridimensionali è difficilmente osservabile e si possono solo osservare le proiezioni delle traiettorie. La semplicità del modello di Fitzhugh-Nagumo invece permette di vedere tutte le soluzioni, e questo permette di spiegare geometricamente molti importanti fenomenti biologici legati all'eccitazione di un neurone con un meccanismo di generazione a "spike". \\ \\
 \subsection{Varianti: L'oscillatore di Van Der Pol forzato}
 
 \section{Soluzione numerica e simulazione}
@@ -298,5 +324,8 @@ Per rendere l'idea in un modo tutt'altro che rigoroso, per valori piccoli di $\m
 Questo è l'andamento temporale nel caso dell'oscillatore non forzato. \\
 Per un oscillatore forzato si troverebbe un andamento vagamente simile a questo, ma con una forma molto più irregolare. Questo è dovuto al fatto che in un'oscillatore del genere, una forzante periodica producerebbe una caoticità, che renderebbe quindi molto più imprevedibile la traiettoria.
 \section{Circuito elettronico}
+
+\section{Bibliografia}
+
 
 \end{document}
