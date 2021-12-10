@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
-\title{Progetto di sistemi complessi}
+\title{Studio dell'oscillatore di Van Der Pol \\
+	delle sue varianti e delle sue applicazioni}
 \author{Simone Balducci, Alessandro Mancini}
 \date{}
 
@@ -173,35 +174,147 @@ L'oscillatore di Van Der Pol è stato ideato originariamente dall'ingegnere elet
 Quando questi circuiti venivano portati vicino al ciclo limite,. \\
 Van Der Pol e i suoi colleghi scoprirono inoltre che a certe frequenze si sentiva un rumore irregolare, che più avanti verrà attribuito al caos deterministico. 
 \subsection{Applicazioni}
-\subsubsection{Il neurone \\}
-\subsubsection{Il modello di Fitzhugh-Nagumo}
-La caratteristica più importante di un neurone è la sua eccitabilità, cioè la sua capacità di depolarizzarsi e ripolarizzarsi velocemente rispetto al potenziale di membrana a riposo, producendo così un picco stretto noto come potenziale d'azione. Il potenziale di membrana è la differenza di potenziale elettrico tra l'interno e l'esterno della membrana cellulare. \\ \\
-Il miglior modello per descrivere la dinamica di un neurone eccitato il il modello di Hodgkin-Huxley. Tuttavia, nonostante questo modello sia molto preciso da un punto di vista fisiologico, esso ha diversi difetti di tipo pratico. In particolare, essendo un modello altamente non lineare, può esibire molti comportamenti caotici, che sono difficili da studiare in quattro dimensioni. Per questo motivo spesso si studia il modello di FitzHugh-Nagumo, che è più semplice e facilmente studiabile. Infatti questo modello può essere visto come la proiezione bidimensionale del modello di Hodgkin-Huxley. \\ \\
-La dinamica del modello di Fitzhugh-Nagumo è descritta da un sistema di equazioni differenziali non lineari, caratterizzate dalla presenza di due scale temporali:
+\subsubsection{I neuroni e le cellule cardiace}
+Un neurone può creare un potenziale di propagazione, che ha una crescita molto rapida, seguita da una decrescita e una stabilizzazione attorno a uno zero. Mediante la propagazione di questo potenziale il neurone può "comunicare con gli altri neuroni". \\
+Le cellule cardiache invece sono cellule muscolari in grado di contrarsi ed estendersi. Tali cellule sono caratterizzate dalla capacità di propagare un segnale (come fanno i neuroni) alle cellule adiacenti, inducendone così la contrazione. Quello che accade di solito è che una prima particella viene eccitata da uno stimolo esterno che ne causa una contrazione, che poi si propaga alle cellule adiacenti, generando una sorta di onda di contrazioni di cellule. Se riportiamo in un grafico la contrazione della cellula cardiaca, $x$, in funzione di un segnale elettrico $b$ che causa la contrazione, cioè lo stimolo esterno, si ottiene il grafico \\ \\ \\
+e si vede un comportamento molto simile a quello dell'oscillatore di Van Der Pol:
+La contrazione parte lentamente, per poi accentuarsi ad un certo punto, in cui la lunghezza $x$ varia molto velocemente, e questo processo ripetuto crea un moto periodico. \\ \\
+Il modello che usiamo per rappresentare questo sistema è
 \begin{equation}
 	\begin{cases}
-		\varepsilon\dot{u}(t) = u(t) - \frac{u^3(t)}{3}-v(t)+I_{e}(t) \\
-		\dot{v}(t) = u(t) + a
+		\ \varepsilon \dfrac{dx}{dt} = -(x^3 - Tx + b) \\
+		\dfrac{db}{dt} = x - x_0
 	\end{cases}
 \end{equation}
-La $u(t)$ rappresenta la variabile veloce, ovvero la variabile che cambia più velocemente, che presenta una dinamica piccata di quasi-soglia, simile al potenziale di membrana. La $v(t)$ è la variabile lenta, che si chiama variabile di recupero, e rappresenta la caratteristica refrattarietà del neurone dopo essersi eccitato. La separazione tra le due scale temporali è dettata dal parametro $\varepsilon$. $I_e$ è uno stimolo esterno, che può rappresentare le correnti date dalle interazioni con gli altri neuroni o dagli stimoli esterni. Infine $a$ è un parametro dinamico che regola il regime dinamico del modello. \\ \\
-Il sistema possiede un punto fisso $(u,v) = \left(-a,-a+\frac{a^3}{3} \right) $ che è stabile quando $|a|>1$ e diventa instabile quando $|a|<1$, e in questa condizione si presenta un ciclo limite. \\
-Il primo regime dinamico si chiama eccitabile, che è interpretabile come un neurone standard, mentre il secondo regime è il regime di "spiking tonico", che può essere interpretato come un neurone pacemaker.Per capire il meccanismo della produzione dei picchi analizziamo lo spazio delle fasi. Disegnamo le nullcline, ovvero le curve lungo le quali le derivate temporali delle rispettive variabili temporali sono nulle. La nullclina della variabile $v$ quindi è una curva verticale in $u = -a$, mentre la nullclina di $u$ è una cubila. \\
-Nel regime di spiking tonico, il ciclo limite è composto da quattro fasi:
-
-1) Un lento moto in alto lungo il ramo destro della nullclina. 
-
-2) Un veloce salto verso il ramo sinistro.
-
-3) Un lento moto verso il basso lungo il ramo sinistro. 
-
-4) Un veloce salto verso il ramo sinistro.\\ \\
-Nella fase di attività tonica questi stati sono ripetuti indefinitamente. \\
-Nello stato eccitabile, il punto fisso diventa attrattivo, e il sistema non perturbato tende a raggiungerlo muovendoli lungo la nullclina cubica. \\
-Se ad esempio prendiamo $a > 1$, il punto fisso si troverà sul ramo sinistro della nullclina cubica. Se applichiamo un veloce shock positivo mediante la variabile $I_e$, il sistema si sposterà verso la direzione positiva delle $u$, e in base all'entità dello shock possono succedere due fenomeni: Se l'impulso è sotto il livello di soglia, il sistema verrà ricatturato dal ramo refrattario e continuerà a muoversi asintoticamente verso il punto fisso. Se invece l'impulso è sopra il livello di soglia, il sistema salterà verso la regione attiva, seguendola fino a raggiungere un massimo in $u = 1$, e a quel punto salterà indietro verso il ramo refrattario, riprendendo il moto asintotico. Quest'ultimo effetto prende il nome di effetto di quasi-soglia.
-
-
-  
+A questo punto poniamo le derivate nulle e studiamo le nullcline: 
+\begin{figure}[H]
+	\centering
+	\input{NeuronNullcline2.tex}
+\end{figure}
+La nullclina della seconda equazione è una retta verticale, mentre la nullclina della prima equazione è una cubica. Le due nullcline si intersecano in un punto di equilibrio $(x_0,b_0)$. \\ 
+Essendo tale punto un punto di equilibrio, il sistema tenderà a tornarci quando perturbato da quella condizione. I punti $A$ e $B$ invece sono punti instabili. Vista l'instabilità dei punti $A$ e $B$, se il sistema si avvicina ad essi, esso viene spinto verso il ramo opposto della nullclina molto velocemente, perchè $\varepsilon$ è un parametro piccolo quindi il suo inverso diventa grande. A questo punto il sistema si avvicinerà verso l'altro punto instabile e verrà di nuovo spinto verso l'altro ramo, tornando così al punto di partenza. \\ \\
+La dinamica della cellula cardiaca può quindi essere descritta così: La cellula si trova in una condizione iniziale stabile nel punto $(x_0,b_0)$, fino a che uno stimolo esterno non sposta la posizione $x_0$ di equilibrio e porta il sistema verso il punto $A$, da cui poi la particella si contrae violentemente (effetto soglia), per poi tornare spontaneamente alla posizione iniziale. Si capisce quindi che il ramo $AB$ non viene mai percorso. \\ \\
+A questo punto si vuole studiare la stabilità del punto di equilibrio. Per fare ciò linearizziamo il problema
+$$
+	\Delta x = x - x_0 \ \ \ \ \ \ \ \ \ \ \Delta b = b - b_0
+$$
+e otteniamo il sistema di equazioni
+\begin{equation}
+	\begin{cases}
+		\varepsilon\dfrac{d}{dt}\Delta x = -(3x_0^2 - T)\Delta x - \Delta b \\
+		\dfrac{d}{dt} \Delta b = \Delta x
+	\end{cases}
+\end{equation}
+e tale sistema è rappresentabile in forma matriciale
+\begin{equation}
+	D_t \begin{pmatrix}
+		\Delta x \\
+		\Delta b
+	\end{pmatrix} = \begin{pmatrix}
+	\frac{-3x_0^2 + T}{\varepsilon} & -\frac{1}{\varepsilon} \\
+	1 & 0
+\end{pmatrix} \begin{pmatrix}
+	\Delta x \\
+	\Delta b
+\end{pmatrix}
+\end{equation}
+Questa matrice ha determinante positivo e uguale a $1/\varepsilon$, e dal momento che in una matrice il determinante è uguale al prodotto degli autovalori, per una matrice $2\times 2$ come questa gli autovalori possono solo essere entrambi positivi o entrambi negativi, e possiamo capire il segno guardando la traccia. Perchè il punto $(x_0,b_0)$ sia stabile gli autovalori devono essere negativi, quindi poniamo la traccia della matrice negativa
+$$
+	-3x_0^2 + T < 0
+$$ 
+che da la condizione 
+\begin{equation}
+	T < 3x_0^2
+\end{equation} \\
+Si ottiene così che, inserendo nell'equazione una funzione periodica $x^*(t)$, che rappresenta lo stimolo esterno, le equazioni diventano
+\begin{equation}
+	\begin{cases}
+		\ \varepsilon \dfrac{dx}{dt} = -(x^3 - Tx + b) \\
+		\dfrac{db}{dt} = x - x^*(t)
+	\end{cases}
+\end{equation}
+e risolvendo questa equazione si ottiene un ciclo molto simile a quello dell'oscillatore di Van Der Pol. \begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Heartbeat}
+\end{figure}
+A questo punto si può pensare di accoppiare due neuroni, e usare la contrazione di uno per stimolare l'altro. Si costruiscono due sistemi descritti dalle seguenti equazioni
+\begin{equation}
+	\begin{cases}
+		\ \varepsilon \dfrac{dx}{dt} = -(x^3 - Tx + b) \\
+		\dfrac{db}{dt} = x - y
+	\end{cases} \ \ \ \ \ \ \ \ \ \ 
+	\begin{cases}
+		\ \varepsilon \dfrac{dy}{dt} = -(y^3 - Ty + b') \\
+		\dfrac{db'}{dt} = y - x 
+	\end{cases}
+\end{equation}
+e vediamo che così facendo ognuno dei due sente lo stimolo dell'altro, e così riusciamo a sostenere l'onda senza bisogno di uno stimolo esterno. Quindi $b$ e $b'$ non rappresentano più uno stimolo esterno, ad esempio una corrente, bensì rappresentano lo stimolo che un neurone esercita sull'altro. \\
+A questo punto si potrebbe creare una catena di neuroni, dove il primo viene stimolato da uno stimolo esterno, il secondo viene stimolato dal primo e a sua volta stimola il terzo e così via, creando così un'onda.
+\subsubsection{Il modello di FitzHugh-Nagumo}
+Il modello migliore e più preciso dal punto di vista fisiologico per descrivere un neurone è il modello di Hodgkin-Huxley. Tuttavia questo modello presenta diverse complicazioni, la principale delle quali è la sua estrema non linearità, che esibisce comportamenti caotici che sono difficili da studiare in quattro dimensioni. \\
+Per quanto detto, di solito si utilizza una versione semplificata di questo modello che deriva dall'oscillatore di Van Der Pol, cioè il modello di FitzHugh-Nagumo. Questo modello può essere visto come la proiezione bidimensionale del modello di Hodgkin-Huxley. \\ \\
+Come detto, il modello di FitzHugh-Nagumo deriva dal modello di Van Der Pol, e infatti le equazioni che lo descrivono hanno una struttura molto simile:
+\begin{equation}
+	\begin{cases}
+		\dot{V} = V - \dfrac{V^3}{3} - W + I \\
+		\dot{W} = \dfrac{1}{\tau} \left(V -bW + a\right) 
+	\end{cases}
+\end{equation}
+dove la $V$ rappresenta la variabile veloce, ovvero la variabile che cambia più velocemente, che presenta una dinamica piccata di quasi-soglia, e rappresenta il potenziale di membrana. La $W$ è la variabile lenta, che si chiama variabile di recupero, e rappresenta la caratteristica refrattarietà del neurone dopo essersi eccitato, infatti si chiama variabile di recupero. La separazione tra le due scale temporali è dettata dal parametro $\tau$, perchè $\tau$ è grande, quindi il suo opposto è piccolo, e questo rallenta la variabile $W$. $I$ è uno stimolo esterno, che può rappresentare le correnti date dalle interazioni con gli altri neuroni o dagli stimoli esterni. Infine $a$ è un parametro dinamico che regola il regime dinamico del modello. \\ \\
+Studiamo di nuovo le nullcline di questo problema:
+$$
+	W = x - \frac{x^3}{3} + I \ \ \ \ \ \ \ \ \ \ W = \frac{x+a}{b}
+$$
+A questo punto, lo stimolo definisce l'intersezione tra l'asse e la cubica, quindi agendo su esso possiamo spostare in alto o in basso la nullclina cubica. \\
+L'intersezione tra le due nullcline rappresenta i punti di equilibrio, e in questo caso si ha un solo equilibrio (anche se potrebbero essere di più). 
+\begin{figure}[H]
+	\centering
+	\input{FHNNullcline.tex}
+\end{figure}
+A questo punto studiamo i segni delle derivate, e quindi il campo vettoriali. \\
+Se siamo sopra la cubica, la derivata delle $V$ è negativa, mentre questa derivata è positiva sotto alla cubica. La retta invece definisce la derivata della $W$, e tale derivata è negativa sopra alla retta e positiva sotto di essa. In questo modo si divide lo spazio delle fasi in 4 regioni dove i segni delle componenti del campo vettoriale sono diversi, e vediamo che, come per l'oscillatore di Van Der Pol, questo campo ha la funzione di riportare il punto sulla nullclina cubica. \\
+Si potrebbe pensare che il punto sia di equilibrio, e per capire se sia veramente così lo studiamo. \\
+Definiamo $\delta V = V - V_p$ e $\delta W = W - W_p$, dove il punto di equilibrio è $(V_p,W_p)$. Ora che abbiamo linearizzato il sistema otteniamo il sistema
+\begin{equation}
+	\begin{cases}
+		\delta \dot{V} = (1-V^2_p)\delta V - \delta W \\
+		\delta \dot{W} = \frac{1}{\tau}\delta V - \frac{b}{\tau}\delta W 
+	\end{cases}
+\end{equation}
+e così è definita la matrice 
+\begin{equation}
+	J = \begin{pmatrix}
+		(1-V_p^2) & -1 \\
+		\frac{1}{\tau} & -\frac{b}{\tau}
+	\end{pmatrix}
+\end{equation}
+Il determinante di questa matrice vale
+$$
+	det \ J = -\frac{b}{\tau}(1-V_p^2) + \frac{1}{\tau}
+$$
+Se $V_p$ è grande, il determinante è sempre positivo e il punto è sicuramente stabile. \\
+Se però aumento lo stimolo $I$, traslo la cubica verso l'alto, e questo sposta il punto di equilibrio verso l'origine, e così facendo il determinare può diventare negativo. Se a questo punto la traccia diventasse positiva, cambierebbe la stabilità e il punto diventerebbe instabile. Se il punto si sposta poco dal punto di equilibrio, rimane nella zona di stabilità e vi ritorna. Se invece lo stimolo è grande e il punto si sposta molto dall'equilibrio si ottiene una traiettoria molto simile a quella dell'oscillatore di Van Der Pol. \\ 
+Questo effetto si dice di pseudo-soglia, perchè le traiettorie nei due casi non sono completamente diversi, bensì si ha una transizione continua tra le due. \\
+Per ottenere questo effetto si può usare uno stimolo con la forma di una delta di Dirac
+\begin{equation}
+	I(t) = \Delta x\delta(t')
+\end{equation}
+dove $\Delta x$ è l'intensità dello stimolo e $t'$ è il tempo a cui viene somministrato. \\ \\
+Questo sistema di equazioni differenziali è un sistema che si dice stiff (verranno approfondite di più le equazioni stiff nella sezione precedente), perchè le due equazioni hanno scale temporali molto diverse, la prima ha scala $1$ mentre la seconda ha scala $1/\tau \ll 1$, quindi è difficile trattarle, perchè essendo messe a sistema devono essere risolte contemporanemente, ma il fatto che evolvano su scale temporali diverse rende difficile scegliere un timestep che sia adeguato per entrambe.  \\ \\
+Anche per questo sistema definiamo la funzione di Ljapounov definita in precedenza (che in questo caso indichiamo con $H$ invece che con $V$ per evitare confuzione)
+\begin{equation}
+	H = \frac{1}{2}\left(W^2 + \frac{V^2}{\tau} \right) 
+\end{equation}
+che definisce un ellisse. Calcoliamo la derivata temporale di questa funzione
+$$
+	\frac{dH}{dt} = W\dot{W} + \frac{1}{\tau}V\dot{V} = \frac{W}{\tau}\left(V+a-bW\right)+\frac{1}{\tau}V\left(V - \frac{V^3}{3}-W+I \right) = 
+$$
+$$
+	=\frac{Wa}{\tau} - \frac{bW^2}{\tau} + \frac{V^2}{\tau} - \frac{V^4}{3\tau} + \frac{V}{\tau} < 0
+$$
+e vediamo che i due termini dominanti, cioè $V^4$ e $W^2$, sono negativi, quindi molto lontano dall'origine il sistema non può espandersi all'infinito. Quello che si trova è una biforcazione di Hopf, ovvero il sistema si espande da un punto fino a che non arriva a un ciclo limite, cioè una traiettoria percorsa che diventa anche attrattiva (e questo fu uno dei primi esempi in cui si vide che oltre ai punti, anche delle intere traiettorie possono essere attrattive). \\
+Questo comportamento era caratteristico dell'oscillatore di Van Der Pol e mostra un'ulteriore collegamento tra questi due importanti modelli. \\ \\
+Anche in questo caso è possibili accoppiare due neuroni, che si accoppieranno e si stimoleranno a vicenda, autosostenendo le loro traiettorie.
 \subsection{Varianti: L'oscillatore di Van Der Pol forzato}
 
 \section{Soluzione numerica e simulazione}
@@ -387,7 +500,50 @@ Quando la costante di smorzamento $\mu$ è grande, il periodo di oscillazione de
 2) Esponenziale rambaldi \\
 3) Oscillatore rambaldi \\
 4) Wikipedia \\
-5) Scholarpedia \\
+5) Scholarpedia \\ \\ \\
+La caratteristica più importante di un neurone è la sua eccitabilità, cioè la sua capacità di depolarizzarsi e ripolarizzarsi velocemente rispetto al potenziale di membrana a riposo, producendo così un picco stretto noto come potenziale d'azione. Il potenziale di membrana è la differenza di potenziale elettrico tra l'interno e l'esterno della membrana cellulare. \\ \\
+Il miglior modello per descrivere la dinamica di un neurone eccitato è il modello di Hodgkin-Huxley. Tuttavia, nonostante questo modello sia molto preciso da un punto di vista fisiologico, esso ha diversi difetti di tipo pratico. In particolare, essendo un modello altamente non lineare, può esibire molti comportamenti caotici, che sono difficili da studiare in quattro dimensioni. Per questo motivo spesso si studia il modello di FitzHugh-Nagumo, che è più semplice e facilmente studiabile. Infatti questo modello può essere visto come la proiezione bidimensionale del modello di Hodgkin-Huxley. \\ \\
+La dinamica del modello di Fitzhugh-Nagumo è descritta da un sistema di equazioni differenziali non lineari, caratterizzate dalla presenza di due scale temporali:
+\begin{equation}
+	\begin{cases}
+		\varepsilon\dot{u}(t) = u(t) - \frac{u^3(t)}{3}-v(t)+I_{e}(t) \\
+		\dot{v}(t) = u(t) + a
+	\end{cases}
+\end{equation}
+La $u(t)$ rappresenta la variabile veloce, ovvero la variabile che cambia più velocemente, che presenta una dinamica piccata di quasi-soglia, simile al potenziale di membrana. La $v(t)$ è la variabile lenta, che si chiama variabile di recupero, e rappresenta la caratteristica refrattarietà del neurone dopo essersi eccitato. La separazione tra le due scale temporali è dettata dal parametro $\varepsilon$. $I_e$ è uno stimolo esterno, che può rappresentare le correnti date dalle interazioni con gli altri neuroni o dagli stimoli esterni. Infine $a$ è un parametro dinamico che regola il regime dinamico del modello. \\ \\
+Il sistema possiede un punto fisso $(u,v) = \left(-a,-a+\frac{a^3}{3} \right) $ che è stabile quando $|a|>1$ e diventa instabile quando $|a|<1$, e in questa condizione si presenta un ciclo limite. \\
+Il primo regime dinamico si chiama eccitabile, che è interpretabile come un neurone standard, mentre il secondo regime è il regime di "spiking tonico", che può essere interpretato come un neurone pacemaker. Per capire il meccanismo della produzione dei picchi analizziamo lo spazio delle fasi. Disegnamo le nullcline, ovvero le curve lungo le quali le derivate temporali delle rispettive variabili temporali sono nulle. La nullclina della variabile $v$ quindi è una curva verticale in $u = -a$, mentre la nullclina di $u$ è una cubila. \\
+Nel regime di spiking tonico, il ciclo limite è composto da quattro fasi:
+
+1) Un lento moto in alto lungo il ramo destro della nullclina. 
+
+2) Un veloce salto verso il ramo sinistro.
+
+3) Un lento moto verso il basso lungo il ramo sinistro. 
+
+4) Un veloce salto verso il ramo sinistro.\\ \\
+Nella fase di attività tonica questi stati sono ripetuti indefinitamente. \\
+Nello stato eccitabile, il punto fisso diventa attrattivo, e il sistema non perturbato tende a raggiungerlo muovendoli lungo la nullclina cubica. \\
+Se ad esempio prendiamo $a > 1$, il punto fisso si troverà sul ramo sinistro della nullclina cubica. Se applichiamo un veloce shock positivo mediante la variabile $I_e$, il sistema si sposterà verso la direzione positiva delle $u$, e in base all'entità dello shock possono succedere due fenomeni: Se l'impulso è sotto il livello di soglia, il sistema verrà ricatturato dal ramo refrattario e continuerà a muoversi asintoticamente verso il punto fisso. Se invece l'impulso è sopra il livello di soglia, il sistema salterà verso la regione attiva, seguendola fino a raggiungere un massimo in $u = 1$, e a quel punto salterà indietro verso il ramo refrattario, riprendendo il moto asintotico. Quest'ultimo effetto prende il nome di effetto di quasi-soglia. In più, calcolando la derivata temporale di $u$ tra i rami della nullclina cubica si trova che il ramo centrale è repulsivo lungo l'asse $u$. Inoltre si trova che per ogni istante temporale in cui viene generato un potenziale d'azione, l'impulso è tale da spostare il sistema attraverso il ramo della nullclina centrale, anche se in alcuni casi in cui il sistema attraversa la nullclina, non produce nessun picco. Si capisce quindi che, almeno in prima approssimazione, l'attraversamento di una nullclina possa essere considerato un trigger per la produzione di un potenziale d'azione. \\ \\
+Si può spiegare questo comportamento dello stato eccitabile mostrando la differenza tra le scale temporali delle due variabili. Il moto lungo la variabile $u$ ha scala temporale $\varepsilon$, mentre quello lungo la variabile $v$ ha scala temporale $1$. Questo permette di considerare, approssimativamente, il moto delle due variabili separatamente: Il moto di $u$ si può considerare che avvenga per $v$ costanti, mentre quello lungo $v$ si può pensare che avvenga per valori di $u$ che sono funzione di $v$. Consideriamo prima il moto lungo $u$, che è governato dall'equazione 
+$$
+\varepsilon \dot{u} = u - \frac{u^3}{3} - \overline{v}
+$$
+dove $\overline{v}$ è il valore di $v$ che prendiamo costante. Questa equazione ha tre equilibri per $|\overline{v}|<2/3$, uno per $|\overline{v}|>2/3$ e due nel caso limite $|\overline{v}|= \pm 2/3$. Il tipo di equilibrio nei punti fissi dipende dal ramo della nullclina $u$ su cui sono posizionati. \\
+Per $|\overline{v}|<2/3$ i due punti estermi sono attrattivi, mentre quello sul ramo centrale è repulsivo. Per $|\overline{v}|>2/3$ il punto di equilibrio è attrattivo. Infine i due punti limite sono punti di sella. Possiamo ora spiegare la produzione del picco di potenziale d'azione. \\ \\
+Consideriamo un neurone quiescente, ovvero un sistema di Fitzhugh-Nagumo che si trova vicino alla dinamica globale del punto di equilibrio $(u^*,v^*)$. Dal momento che consideriamo il regime eccitabile, possiamo considerare che questo punto si trovi sul ramo destro della nullclina $u$. \\
+Forziamo ora il sistema nella direzione delle $u$ positive mediante un impulso della forma di una delta di Dirac. In base alla magnitudine di questo impulso, il sistema può fermarsi prima del punto instabile o attraversarlo. \\
+Nel primo caso il sistema viene respinto indietro verso il punto di partenza, mentre nel secondo caso viene respinto in avanti verso il punto di equilibrio stabile nel lato destro della nullclina. Una volta che il sistema raggiunge questo punto, la variabile $u$ rimane in prossimità di esso, mentre $v$ cresce secondo l'equazione
+$$
+\dot{v} = u + a
+$$ 
+dove $u$ è approssimativamente dato dalla soluzione dell'equazione
+$$
+v = u - \frac{u^3}{3}
+$$
+quindi, quando $v$ cresce, $u$ segue approssimativamente il ramo destro della nullclina. Via a via che $v$ cresce, attraversa il valore $v = 2/3$, sopra cui la dinamica della scala temporale lungo $u$ rimane improvviamente con un punto fisso nel lato sinistro della nullclina di $u$. In risposta a questo cambiamento, la dinamica di ordine $\varepsilon$ muove velocemente il sistema verso il ramo sinistro. Una volta che esso ha raggiunto la nullclina, ricomincia il moto con stala temporale $1$, questa volta verso il basso, con $u + a < 0$. \\
+Muovendosi lungo il lato sinistro della nullclina, il sistema si avvicina al punto fisso della dinamica globase, entrando di nuovo in uno stato quiescente in cui aspetta lo stimolo seguente.
+
 
 
 \end{document}
