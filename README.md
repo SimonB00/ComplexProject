@@ -1,2 +1,2 @@
 # ComplexProject
-Project for the exam of "Physics of complex systems"
+Project for the exam of " Introduction to the physics of complex systems"
