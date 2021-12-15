@@ -1,0 +1,1861 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.29)  14 DEC 2021 22:51
+entering extended mode
+**./Project.tex
+(Project.tex
+LaTeX2e <2021-11-15>
+L3 programming layer <2021-11-22>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks17
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Program Files\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks26
+)
+(C:\Program Files\MiKTeX\tex/latex/braket\braket.sty)
+(C:\Program Files\MiKTeX\tex/latex/bbold\bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count269
+\Gm@cntv=\count270
+\c@Gm@tempcnt=\count271
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks28
+
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Program Files\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box52
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count272
+\c@pgf@countb=\count273
+\c@pgf@countc=\count274
+\c@pgf@countd=\count275
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count276
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count277
+\pgfsyssoftpath@bigbuffer@items=\count278
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count279
+\pgfmath@box=\box53
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.co
+de.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.
+tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
+cs.code.tex)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count280
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
+ex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count281
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
+x
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen189
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
+.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.
+tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen193
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count282
+\pgf@shadingcount=\count283
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box57
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.te
+x
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box58
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
+tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count284
+\pgfplotmarksize=\dimen199
+)
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count285
+\tikznumberofchildren=\count286
+\tikznumberofcurrentchild=\count287
+\tikz@fig@count=\count288
+ (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
+)
+\tikz@expandcount=\count292
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+\t@pgfplots@toka=\toks41
+\t@pgfplots@tokb=\toks42
+\t@pgfplots@tokc=\toks43
+\pgfplots@tmpa=\dimen264
+\c@pgfplots@coordindex=\count293
+\c@pgfplots@scanlineindex=\count294
+
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp
+_loader.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructu
+re.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructu
+reext.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.
+tex
+\c@pgfplotsarray@tmp=\count295
+)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code
+.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code
+.tex
+\c@pgfplotstable@counta=\count296
+\t@pgfplotstable@a=\toks44
+)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.
+tex) (C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex
+
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex
+))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshadi
+ng.code.tex
+\c@pgfplotslibrarysurf@no=\count297
+
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshadin
+g.pgfsys-pdftex.def)))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex)))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rydecorations.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen265
+\pgfdecoratedremainingdistance=\dimen266
+\pgfdecoratedinputsegmentcompleteddistance=\dimen267
+\pgfdecoratedinputsegmentremainingdistance=\dimen268
+\pgf@decorate@distancetomove=\dimen269
+\pgf@decorate@repeatstate=\count298
+\pgfdecorationsegmentamplitude=\dimen270
+\pgfdecorationsegmentlength=\dimen271
+)
+\tikz@lib@dec@box=\box63
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rydecorations.pathmorphing.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecora
+tions.pathmorphing.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rydecorations.pathreplacing.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecora
+tions.pathreplacing.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourl
+ua.code.tex)
+\pgfplots@numplots=\count299
+\pgfplots@xmin@reg=\dimen272
+\pgfplots@xmax@reg=\dimen273
+\pgfplots@ymin@reg=\dimen274
+\pgfplots@ymax@reg=\dimen275
+\pgfplots@zmin@reg=\dimen276
+\pgfplots@zmax@reg=\dimen277
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (C:\Program Files\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
+)
+(C:\Program Files\MiKTeX\tex/latex/physics\physics.sty
+Package: physics 
+
+(C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+(C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-11-22 L3 programming layer (loader) 
+
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count300
+\l__pdf_internal_box=\box64
+))
+Package: xparse 2021-11-12 L3 Experimental document command parser
+))
+(C:\Program Files\MiKTeX\tex/latex/systeme\systeme.sty
+(C:\Program Files\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Program Files\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count301
+\decimalpart=\count302
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
+(C:\Program Files\MiKTeX\tex/generic/systeme\systeme.tex
+\SYS_systemecode=\toks45
+\SYS_systempreamble=\toks46
+\SYSeqnum=\count303
+)
+Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
+)
+(C:\Program Files\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+
+(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count304
+\calc@Bcount=\count305
+\calc@Adimen=\dimen278
+\calc@Bdimen=\dimen279
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count306
+\calc@Cskip=\skip66
+)
+(C:\Program Files\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count307
+\l_MT_multwidth_dim=\dimen280
+\origjot=\skip67
+\l_MT_shortvdotswithinadjustabove_dim=\dimen281
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen282
+\l_MT_above_intertext_sep=\dimen283
+\l_MT_below_intertext_sep=\dimen284
+\l_MT_above_shortintertext_sep=\dimen285
+\l_MT_below_shortintertext_sep=\dimen286
+\xmathstrut@box=\box65
+\xmathstrut@dim=\dimen287
+)
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count308
+\float@exts=\toks47
+\float@box=\box66
+\@float@everytoks=\toks48
+\@floatcapt=\box67
+)
+(C:\Program Files\MiKTeX\tex/latex/relsize\relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+(C:\Program Files\MiKTeX\tex/latex/doublestroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(C:\Program Files\MiKTeX\tex/latex/fundus-calligra\calligra.sty
+Package: calligra 2012/04/10 v1.9 LaTeX package calligra
+)
+(C:\Program Files\MiKTeX\tex/latex/circuitikz\circuitikz.sty
+Package: circuitikz 2021/10/31{} The CircuiTikz circuit drawing package version
+ 1.4.4
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.t
+ex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen288
+\pgfarrowlength=\dimen289
+\pgfarrowwidth=\dimen290
+\pgfarrowlinewidth=\dimen291
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rybending.code.tex
+File: tikzlibrarybending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulenonlineartransformati
+ons.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgftransformnonlinearflatness=\dimen292
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibrarycurvilinear.code.t
+ex
+File: pgflibrarycurvilinear.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@curvilinear@time@a=\dimen293
+\pgf@curvilinear@length@a=\dimen294
+\pgf@curvilinear@length@b=\dimen295
+\pgf@curvilinear@length@c=\dimen296
+\pgf@curvilinear@length@d=\dimen297
+)
+\pgf@arrows@the@rigidity=\dimen298
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryfpu.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex
+\pgf@circ@count@a=\count309
+\pgf@circ@count@b=\count310
+\pgf@circ@count@c=\count311
+\pgf@circ@res@up=\dimen299
+\pgf@circ@res@down=\dimen300
+\pgf@circ@res@zero=\dimen301
+\pgf@circ@res@left=\dimen302
+\pgf@circ@res@right=\dimen303
+\pgf@circ@res@other=\dimen304
+\pgf@circ@res@step=\dimen305
+\pgf@circ@res@temp=\dimen306
+\pgf@circ@Rlen=\dimen307
+\pgf@circ@scaled@Rlen=\dimen308
+\pgfstartlinewidth=\dimen309
+)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex
+\ctikz@scratchbox=\box68
+)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircpath.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex
+\pgf@circ@res@count=\count312
+)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen310
+)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex)
+(C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex))
+(C:\Program Files\MiKTeX\tex/latex/gnuplottex\gnuplottex.sty
+Package: gnuplottex 2020/03/19 v0.9.5 gnuplot graphs in LaTeX
+
+(C:\Program Files\MiKTeX\tex/latex/moreverb\moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+
+(C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks49
+\verbatim@line=\toks50
+\verbatim@in@stream=\read3
+)
+\tab@position=\count313
+\tab@size=\count314
+\listing@line=\count315
+)
+(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Program Files\MiKTeX\tex/generic/catchfile\catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+\verbatim@out=\write4
+runsystem(echo t > "w18-test-202112141371.tex")...executed.
+
+runsystem(del "w18-test-202112141371.tex")...executed.
+
+Package gnuplottex Info: Automatically converting gnuplot files on input line 1
+12.
+\c@fignum=\count316
+)
+(C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)))
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/11/08 3.66 The Babel package
+\babel@savecnt=\count317
+\U@D=\dimen311
+\l@unhyphenated=\language79
+
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count318
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Program Files\MiKTeX\tex/latex/babel-italian\italian.ldf
+Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
+\it@lettering=\count319
+\it@doublequoteactive=\count320
+\it@ISOcompliance=\count321
+))
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count322
+)
+(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks51
+\inpenc@posthook=\toks52
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count323
+\lst@gtempboxa=\box69
+\lst@token=\toks53
+\lst@length=\count324
+\lst@currlwidth=\dimen312
+\lst@column=\count325
+\lst@pos=\count326
+\lst@lostspace=\dimen313
+\lst@width=\dimen314
+\lst@newlines=\count327
+\lst@lineno=\count328
+\lst@maxwidth=\dimen315
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count329
+\lst@skipnumbers=\count330
+\lst@framebox=\box70
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (Project.aux)
+\openout1 = `Project.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count331
+\scratchdimen=\dimen316
+\scratchbox=\box71
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen317
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks55
+)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 67.
+
+LaTeX Info: Redefining \it@ocap on input line 67.
+LaTeX Info: Redefining \it@ccap on input line 67.
+
+File italian.ldf warning: 
+italian.ldf    With OT1 encoding guillemets are poorly faked
+italian.ldf    Use T1 encoding
+italian.ldf    or specify a font with command \CaporaliFrom
+italian.ldf    See the documentation concerning the babel-italian typesetting 
+italian.ldf    on input line 67.
+
+\c@lstlisting=\count337
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<Spazio delle fasi oscillatore.jpg, id=4, 844.15375pt x 583.17876pt>
+File: Spazio delle fasi oscillatore.jpg Graphic file (type jpg)
+<use Spazio delle fasi oscillatore.jpg>
+Package pdftex.def Info: Spazio delle fasi oscillatore.jpg  used on input line 
+84.
+(pdftex.def)             Requested size: 337.65552pt x 233.26736pt.
+ [1
+
+{C:/Users/lenovo/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (VecField.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+\gptboxheight=\skip68
+\gptboxwidth=\skip69
+\gptboxtext=\box72
+Package epstopdf Info: Source file: <VecField.eps>
+(epstopdf)                    date: 2021-12-05 19:48:57
+(epstopdf)                    size: 48806 bytes
+(epstopdf)             Output file: <VecField-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 19:52:48
+(epstopdf)                    size: 13780 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=VecFiel
+d-eps-converted-to.pdf VecField.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./VecField-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<VecField-eps-converted-to.pdf, id=15, 341.275pt x 341.275pt>
+File: VecField-eps-converted-to.pdf Graphic file (type pdf)
+<use VecField-eps-converted-to.pdf>
+Package pdftex.def Info: VecField-eps-converted-to.pdf  used on input line 111.
+
+(pdftex.def)             Requested size: 341.39912pt x 341.39912pt.
+) [2 <./Spazio delle fasi oscillatore.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
+
+ []
+
+[3 <./VecField-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
+
+ []
+
+<Traiettorie.jpg, id=26, 522.753pt x 248.127pt>
+File: Traiettorie.jpg Graphic file (type jpg)
+<use Traiettorie.jpg>
+Package pdftex.def Info: Traiettorie.jpg  used on input line 172.
+(pdftex.def)             Requested size: 365.9246pt x 173.6877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
+
+ []
+
+[4]
+<Vari smorzamenti.png, id=30, 217.5327pt x 284.0211pt>
+File: Vari smorzamenti.png Graphic file (type png)
+<use Vari smorzamenti.png>
+Package pdftex.def Info: Vari smorzamenti.png  used on input line 179.
+(pdftex.def)             Requested size: 217.53215pt x 284.0204pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--188
+
+ []
+
+[5 <./Traiettorie.jpg> <./Vari smorzamenti.png>] (NeuronNullcline2.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <NeuronNullcline2.eps>
+(epstopdf)                    date: 2021-12-09 22:42:34
+(epstopdf)                    size: 20964 bytes
+(epstopdf)             Output file: <NeuronNullcline2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 22:42:45
+(epstopdf)                    size: 3573 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=NeuronN
+ullcline2-eps-converted-to.pdf NeuronNullcline2.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./NeuronNullcline2-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<NeuronNullcline2-eps-converted-to.pdf, id=36, 397.485pt x 284.06125pt>
+File: NeuronNullcline2-eps-converted-to.pdf Graphic file (type pdf)
+<use NeuronNullcline2-eps-converted-to.pdf>
+Package pdftex.def Info: NeuronNullcline2-eps-converted-to.pdf  used on input l
+ine 126.
+(pdftex.def)             Requested size: 398.30281pt x 284.48962pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
+
+ []
+
+[6 <./NeuronNullcline2-eps-converted-to.pdf>]
+<Heartbeat.jpg, id=42, 460.72125pt x 322.806pt>
+File: Heartbeat.jpg Graphic file (type jpg)
+<use Heartbeat.jpg>
+Package pdftex.def Info: Heartbeat.jpg  used on input line 245.
+(pdftex.def)             Requested size: 322.50267pt x 225.96265pt.
+ [7] (Sincro.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Sincro.eps>
+(epstopdf)                    date: 2021-12-12 20:51:03
+(epstopdf)                    size: 378535 bytes
+(epstopdf)             Output file: <Sincro-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-12 20:52:03
+(epstopdf)                    size: 1076824 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Sincro-
+eps-converted-to.pdf Sincro.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Sincro-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<Sincro-eps-converted-to.pdf, id=49, 341.275pt x 284.06125pt>
+File: Sincro-eps-converted-to.pdf Graphic file (type pdf)
+<use Sincro-eps-converted-to.pdf>
+Package pdftex.def Info: Sincro-eps-converted-to.pdf  used on input line 121.
+(pdftex.def)             Requested size: 341.39912pt x 284.48962pt.
+)
+Overfull \hbox (38.76479pt too wide) in paragraph at lines 266--267
+ [][] 
+ []
+
+(Sincro3-7.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Sincro3-7.eps>
+(epstopdf)                    date: 2021-12-13 20:54:14
+(epstopdf)                    size: 378867 bytes
+(epstopdf)             Output file: <Sincro3-7-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-13 20:54:32
+(epstopdf)                    size: 1082914 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Sincro3
+-7-eps-converted-to.pdf Sincro3-7.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Sincro3-7-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Sincro3-7-eps-converted-to.pdf, id=50, 341.275pt x 284.06125pt>
+File: Sincro3-7-eps-converted-to.pdf Graphic file (type pdf)
+<use Sincro3-7-eps-converted-to.pdf>
+Package pdftex.def Info: Sincro3-7-eps-converted-to.pdf  used on input line 121
+.
+(pdftex.def)             Requested size: 341.39912pt x 284.48962pt.
+)
+Overfull \hbox (38.76479pt too wide) in paragraph at lines 272--273
+ [][] 
+ []
+
+(Sincro3-5.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Sincro3-5.eps>
+(epstopdf)                    date: 2021-12-13 20:55:04
+(epstopdf)                    size: 378821 bytes
+(epstopdf)             Output file: <Sincro3-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-13 20:55:42
+(epstopdf)                    size: 108839 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Sincro3
+-5-eps-converted-to.pdf Sincro3-5.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Sincro3-5-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Sincro3-5-eps-converted-to.pdf, id=51, 341.275pt x 284.06125pt>
+File: Sincro3-5-eps-converted-to.pdf Graphic file (type pdf)
+<use Sincro3-5-eps-converted-to.pdf>
+Package pdftex.def Info: Sincro3-5-eps-converted-to.pdf  used on input line 120
+.
+(pdftex.def)             Requested size: 341.39912pt x 284.48962pt.
+)
+Overfull \hbox (38.76479pt too wide) in paragraph at lines 280--281
+ [][] 
+ []
+
+(Sincro2.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Sincro2.eps>
+(epstopdf)                    date: 2021-12-13 21:00:31
+(epstopdf)                    size: 369354 bytes
+(epstopdf)             Output file: <Sincro2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-13 21:00:50
+(epstopdf)                    size: 84739 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Sincro2
+-eps-converted-to.pdf Sincro2.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Sincro2-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Sincro2-eps-converted-to.pdf, id=52, 341.275pt x 284.06125pt>
+File: Sincro2-eps-converted-to.pdf Graphic file (type pdf)
+<use Sincro2-eps-converted-to.pdf>
+Package pdftex.def Info: Sincro2-eps-converted-to.pdf  used on input line 120.
+(pdftex.def)             Requested size: 341.39912pt x 284.48962pt.
+)
+Overfull \hbox (38.76479pt too wide) in paragraph at lines 286--287
+ [][] 
+ []
+
+[8 <./Heartbeat.jpg> <./Sincro-eps-converted-to.pdf> <./Sincro3-7-eps-converted
+-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
+
+ []
+
+[9 <./Sincro3-5-eps-converted-to.pdf> <./Sincro2-eps-converted-to.pdf>]
+(FHNNullcline.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <FHNNullcline.eps>
+(epstopdf)                    date: 2021-12-10 11:46:35
+(epstopdf)                    size: 21603 bytes
+(epstopdf)             Output file: <FHNNullcline-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-10 11:47:54
+(epstopdf)                    size: 3882 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=FHNNull
+cline-eps-converted-to.pdf FHNNullcline.eps>
+(epstopdf)             \includegraphics on input line 127.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./FHNNullcline-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FHNNullcline-eps-converted-to.pdf, id=67, 397.485pt x 284.06125pt>
+File: FHNNullcline-eps-converted-to.pdf Graphic file (type pdf)
+<use FHNNullcline-eps-converted-to.pdf>
+Package pdftex.def Info: FHNNullcline-eps-converted-to.pdf  used on input line 
+127.
+(pdftex.def)             Requested size: 398.30281pt x 284.48962pt.
+) [10 <./FHNNullcline-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+[11]
+<Lyap_Exp.jpg, id=76, 569.12625pt x 426.99525pt>
+File: Lyap_Exp.jpg Graphic file (type jpg)
+<use Lyap_Exp.jpg>
+Package pdftex.def Info: Lyap_Exp.jpg  used on input line 373.
+(pdftex.def)             Requested size: 284.56242pt x 213.4971pt.
+ [12 <./Lyap_Exp.jpg>]
+<Lyap_Exp_Calc.jpg, id=80, 511.9125pt x 194.52675pt>
+File: Lyap_Exp_Calc.jpg Graphic file (type jpg)
+<use Lyap_Exp_Calc.jpg>
+Package pdftex.def Info: Lyap_Exp_Calc.jpg  used on input line 397.
+(pdftex.def)             Requested size: 307.14987pt x 116.71693pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--418
+
+ []
+
+[13 <./Lyap_Exp_Calc.jpg>]
+
+LaTeX Warning: Reference `VDPF' on page 14 undefined on input line 441.
+
+[14] (Schema1-5.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Schema1-5.eps>
+(epstopdf)                    date: 2021-12-05 19:04:16
+(epstopdf)                    size: 45223 bytes
+(epstopdf)             Output file: <Schema1-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 19:08:00
+(epstopdf)                    size: 83386 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Schema1
+-5-eps-converted-to.pdf Schema1-5.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Schema1-5-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Schema1-5-eps-converted-to.pdf, id=90, 341.275pt x 341.275pt>
+File: Schema1-5-eps-converted-to.pdf Graphic file (type pdf)
+<use Schema1-5-eps-converted-to.pdf>
+Package pdftex.def Info: Schema1-5-eps-converted-to.pdf  used on input line 117
+.
+(pdftex.def)             Requested size: 341.39912pt x 341.39912pt.
+) (LastFrame.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <LastFrame.eps>
+(epstopdf)                    date: 2021-12-06 22:00:38
+(epstopdf)                    size: 24336 bytes
+(epstopdf)             Output file: <LastFrame-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 22:01:07
+(epstopdf)                    size: 20139 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=LastFra
+me-eps-converted-to.pdf LastFrame.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./LastFrame-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<LastFrame-eps-converted-to.pdf, id=91, 312.16624pt x 312.16624pt>
+File: LastFrame-eps-converted-to.pdf Graphic file (type pdf)
+<use LastFrame-eps-converted-to.pdf>
+Package pdftex.def Info: LastFrame-eps-converted-to.pdf  used on input line 117
+.
+(pdftex.def)             Requested size: 312.97523pt x 312.97523pt.
+) [15 <./Schema1-5-eps-converted-to.pdf>] (MuDiversi.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <MuDiversi.eps>
+(epstopdf)                    date: 2021-12-13 18:17:36
+(epstopdf)                    size: 127267 bytes
+(epstopdf)             Output file: <MuDiversi-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-13 18:18:47
+(epstopdf)                    size: 316678 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=MuDiver
+si-eps-converted-to.pdf MuDiversi.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./MuDiversi-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<MuDiversi-eps-converted-to.pdf, id=97, 284.06125pt x 369.38pt>
+File: MuDiversi-eps-converted-to.pdf Graphic file (type pdf)
+<use MuDiversi-eps-converted-to.pdf>
+Package pdftex.def Info: MuDiversi-eps-converted-to.pdf  used on input line 121
+.
+(pdftex.def)             Requested size: 284.48962pt x 369.8807pt.
+) (Collasso.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Collasso.eps>
+(epstopdf)                    date: 2021-12-06 22:18:59
+(epstopdf)                    size: 54243 bytes
+(epstopdf)             Output file: <Collasso-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 22:19:39
+(epstopdf)                    size: 94543 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Collass
+o-eps-converted-to.pdf Collasso.eps>
+(epstopdf)             \includegraphics on input line 109.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Collasso-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Collasso-eps-converted-to.pdf, id=98, 312.16624pt x 312.16624pt>
+File: Collasso-eps-converted-to.pdf Graphic file (type pdf)
+<use Collasso-eps-converted-to.pdf>
+Package pdftex.def Info: Collasso-eps-converted-to.pdf  used on input line 109.
+
+(pdftex.def)             Requested size: 312.97523pt x 312.97523pt.
+) [16 <./LastFrame-eps-converted-to.pdf> <./MuDiversi-eps-converted-to.pdf>]
+(FirstFrame.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <FirstFrame.eps>
+(epstopdf)                    date: 2021-12-06 21:22:28
+(epstopdf)                    size: 24016 bytes
+(epstopdf)             Output file: <FirstFrame-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 21:23:22
+(epstopdf)                    size: 20031 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=FirstFr
+ame-eps-converted-to.pdf FirstFrame.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./FirstFrame-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<FirstFrame-eps-converted-to.pdf, id=106, 312.16624pt x 312.16624pt>
+File: FirstFrame-eps-converted-to.pdf Graphic file (type pdf)
+<use FirstFrame-eps-converted-to.pdf>
+Package pdftex.def Info: FirstFrame-eps-converted-to.pdf  used on input line 11
+5.
+(pdftex.def)             Requested size: 312.97523pt x 312.97523pt.
+) (AndTemp.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <AndTemp.eps>
+(epstopdf)                    date: 2021-12-06 21:54:29
+(epstopdf)                    size: 50662 bytes
+(epstopdf)             Output file: <AndTemp-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 21:55:13
+(epstopdf)                    size: 94432 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=AndTemp
+-eps-converted-to.pdf AndTemp.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./AndTemp-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<AndTemp-eps-converted-to.pdf, id=107, 511.9125pt x 284.06125pt>
+File: AndTemp-eps-converted-to.pdf Graphic file (type pdf)
+<use AndTemp-eps-converted-to.pdf>
+Package pdftex.def Info: AndTemp-eps-converted-to.pdf  used on input line 118.
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 120--502
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--503
+
+ []
+
+[17 <./Collasso-eps-converted-to.pdf> <./FirstFrame-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 504--510
+
+ []
+
+[18 <./AndTemp-eps-converted-to.pdf>] (Caotico4.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Caotico4.eps>
+(epstopdf)                    date: 2021-12-10 23:10:36
+(epstopdf)                    size: 144776 bytes
+(epstopdf)             Output file: <Caotico4-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-10 23:10:49
+(epstopdf)                    size: 366289 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Caotico
+4-eps-converted-to.pdf Caotico4.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Caotico4-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Caotico4-eps-converted-to.pdf, id=120, 511.9125pt x 284.06125pt>
+File: Caotico4-eps-converted-to.pdf Graphic file (type pdf)
+<use Caotico4-eps-converted-to.pdf>
+Package pdftex.def Info: Caotico4-eps-converted-to.pdf  used on input line 117.
+
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 119--525
+ [][] 
+ []
+
+(Caotico2.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Caotico2.eps>
+(epstopdf)                    date: 2021-12-10 22:41:15
+(epstopdf)                    size: 199816 bytes
+(epstopdf)             Output file: <Caotico2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-10 22:51:51
+(epstopdf)                    size: 481111 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Caotico
+2-eps-converted-to.pdf Caotico2.eps>
+(epstopdf)             \includegraphics on input line 129.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Caotico2-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Caotico2-eps-converted-to.pdf, id=121, 511.9125pt x 284.06125pt>
+File: Caotico2-eps-converted-to.pdf Graphic file (type pdf)
+<use Caotico2-eps-converted-to.pdf>
+Package pdftex.def Info: Caotico2-eps-converted-to.pdf  used on input line 129.
+
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 131--531
+ [][] 
+ []
+
+(VDPF8_01_Phase.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <VDPF8_01_Phase.eps>
+(epstopdf)                    date: 2021-12-14 22:25:31
+(epstopdf)                    size: 378417 bytes
+(epstopdf)             Output file: <VDPF8_01_Phase-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-14 22:26:17
+(epstopdf)                    size: 698515 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=VDPF8_0
+1_Phase-eps-converted-to.pdf VDPF8_01_Phase.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./VDPF8_01_Phase-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<VDPF8_01_Phase-eps-converted-to.pdf, id=122, 341.275pt x 341.275pt>
+File: VDPF8_01_Phase-eps-converted-to.pdf Graphic file (type pdf)
+<use VDPF8_01_Phase-eps-converted-to.pdf>
+Package pdftex.def Info: VDPF8_01_Phase-eps-converted-to.pdf  used on input lin
+e 121.
+(pdftex.def)             Requested size: 341.39912pt x 341.39912pt.
+) [19 <./Caotico4-eps-converted-to.pdf>] (Caotico1.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Caotico1.eps>
+(epstopdf)                    date: 2021-12-10 22:34:54
+(epstopdf)                    size: 199049 bytes
+(epstopdf)             Output file: <Caotico1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-10 22:51:50
+(epstopdf)                    size: 511090 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Caotico
+1-eps-converted-to.pdf Caotico1.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Caotico1-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Caotico1-eps-converted-to.pdf, id=129, 511.9125pt x 284.06125pt>
+File: Caotico1-eps-converted-to.pdf Graphic file (type pdf)
+<use Caotico1-eps-converted-to.pdf>
+Package pdftex.def Info: Caotico1-eps-converted-to.pdf  used on input line 117.
+
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 119--545
+ [][] 
+ []
+
+[20 <./Caotico2-eps-converted-to.pdf> <./VDPF8_01_Phase-eps-converted-to.pdf>]
+(Caotico3.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Caotico3.eps>
+(epstopdf)                    date: 2021-12-10 22:45:42
+(epstopdf)                    size: 379649 bytes
+(epstopdf)             Output file: <Caotico3-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-10 22:51:54
+(epstopdf)                    size: 967842 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Caotico
+3-eps-converted-to.pdf Caotico3.eps>
+(epstopdf)             \includegraphics on input line 127.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Caotico3-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Caotico3-eps-converted-to.pdf, id=137, 511.9125pt x 284.06125pt>
+File: Caotico3-eps-converted-to.pdf Graphic file (type pdf)
+<use Caotico3-eps-converted-to.pdf>
+Package pdftex.def Info: Caotico3-eps-converted-to.pdf  used on input line 127.
+
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 129--551
+ [][] 
+ []
+
+[21 <./Caotico1-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 556--561
+
+ []
+
+[22 <./Caotico3-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 568--571
+
+ []
+
+(ConfrXGGG.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <ConfrXGGG.eps>
+(epstopdf)                    date: 2021-12-05 17:56:02
+(epstopdf)                    size: 6021329 bytes
+(epstopdf)             Output file: <ConfrXGGG-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 17:56:42
+(epstopdf)                    size: 3439839 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=ConfrXG
+GG-eps-converted-to.pdf ConfrXGGG.eps>
+(epstopdf)             \includegraphics on input line 161.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./ConfrXGGG-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<ConfrXGGG-eps-converted-to.pdf, id=148, 511.9125pt x 341.275pt>
+File: ConfrXGGG-eps-converted-to.pdf Graphic file (type pdf)
+<use ConfrXGGG-eps-converted-to.pdf>
+Package pdftex.def Info: ConfrXGGG-eps-converted-to.pdf  used on input line 161
+.
+(pdftex.def)             Requested size: 512.14558pt x 341.39912pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 572--578
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--578
+
+ []
+
+(ConfrXZ.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <ConfrXZ.eps>
+(epstopdf)                    date: 2021-12-05 18:06:15
+(epstopdf)                    size: 97127 bytes
+(epstopdf)             Output file: <ConfrXZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 18:07:08
+(epstopdf)                    size: 187787 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=ConfrXZ
+-eps-converted-to.pdf ConfrXZ.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./ConfrXZ-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<ConfrXZ-eps-converted-to.pdf, id=149, 511.9125pt x 284.06125pt>
+File: ConfrXZ-eps-converted-to.pdf Graphic file (type pdf)
+<use ConfrXZ-eps-converted-to.pdf>
+Package pdftex.def Info: ConfrXZ-eps-converted-to.pdf  used on input line 121.
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 123--582
+ [][] 
+ []
+
+[23] (ConfrP.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <ConfrP.eps>
+(epstopdf)                    date: 2021-12-05 18:17:12
+(epstopdf)                    size: 3013786 bytes
+(epstopdf)             Output file: <ConfrP-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 18:17:36
+(epstopdf)                    size: 1779501 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=ConfrP-
+eps-converted-to.pdf ConfrP.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./ConfrP-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<ConfrP-eps-converted-to.pdf, id=153, 511.9125pt x 284.06125pt>
+File: ConfrP-eps-converted-to.pdf Graphic file (type pdf)
+<use ConfrP-eps-converted-to.pdf>
+Package pdftex.def Info: ConfrP-eps-converted-to.pdf  used on input line 128.
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 130--589
+ [][] 
+ []
+
+[24 <./ConfrXGGG-eps-converted-to.pdf> <./ConfrXZ-eps-converted-to.pdf>]
+(ConfrPZ.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <ConfrPZ.eps>
+(epstopdf)                    date: 2021-12-05 18:19:34
+(epstopdf)                    size: 356057 bytes
+(epstopdf)             Output file: <ConfrPZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 18:20:11
+(epstopdf)                    size: 554996 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=ConfrPZ
+-eps-converted-to.pdf ConfrPZ.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./ConfrPZ-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<ConfrPZ-eps-converted-to.pdf, id=161, 511.9125pt x 284.06125pt>
+File: ConfrPZ-eps-converted-to.pdf Graphic file (type pdf)
+<use ConfrPZ-eps-converted-to.pdf>
+Package pdftex.def Info: ConfrPZ-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 117--594
+ [][] 
+ []
+
+[25 <./ConfrP-eps-converted-to.pdf>] (ConfrMu1.tex
+(C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <ConfrMu1.eps>
+(epstopdf)                    date: 2021-12-05 18:30:52
+(epstopdf)                    size: 8018525 bytes
+(epstopdf)             Output file: <ConfrMu1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-05 18:32:04
+(epstopdf)                    size: 6431222 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=ConfrMu
+1-eps-converted-to.pdf ConfrMu1.eps>
+(epstopdf)             \includegraphics on input line 123.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./ConfrMu1-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<ConfrMu1-eps-converted-to.pdf, id=168, 341.275pt x 341.275pt>
+File: ConfrMu1-eps-converted-to.pdf Graphic file (type pdf)
+<use ConfrMu1-eps-converted-to.pdf>
+Package pdftex.def Info: ConfrMu1-eps-converted-to.pdf  used on input line 123.
+
+(pdftex.def)             Requested size: 341.39912pt x 341.39912pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 600--604
+
+ []
+
+[26 <./ConfrPZ-eps-converted-to.pdf> <./ConfrMu1-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 614--618
+
+ []
+
+(Comp10X.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Comp10X.eps>
+(epstopdf)                    date: 2021-12-06 17:57:42
+(epstopdf)                    size: 469507 bytes
+(epstopdf)             Output file: <Comp10X-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 17:58:02
+(epstopdf)                    size: 938231 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Comp10X
+-eps-converted-to.pdf Comp10X.eps>
+(epstopdf)             \includegraphics on input line 125.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Comp10X-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Comp10X-eps-converted-to.pdf, id=176, 454.69875pt x 284.06125pt>
+File: Comp10X-eps-converted-to.pdf Graphic file (type pdf)
+<use Comp10X-eps-converted-to.pdf>
+Package pdftex.def Info: Comp10X-eps-converted-to.pdf  used on input line 125.
+(pdftex.def)             Requested size: 455.2041pt x 284.48962pt.
+) [27] (Comp10XZ.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Comp10XZ.eps>
+(epstopdf)                    date: 2021-12-06 18:10:41
+(epstopdf)                    size: 170345 bytes
+(epstopdf)             Output file: <Comp10XZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 18:11:32
+(epstopdf)                    size: 420329 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Comp10X
+Z-eps-converted-to.pdf Comp10XZ.eps>
+(epstopdf)             \includegraphics on input line 112.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Comp10XZ-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Comp10XZ-eps-converted-to.pdf, id=180, 454.69875pt x 284.06125pt>
+File: Comp10XZ-eps-converted-to.pdf Graphic file (type pdf)
+<use Comp10XZ-eps-converted-to.pdf>
+Package pdftex.def Info: Comp10XZ-eps-converted-to.pdf  used on input line 112.
+
+(pdftex.def)             Requested size: 455.2041pt x 284.48962pt.
+) (Comp10PZ.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Comp10PZ.eps>
+(epstopdf)                    date: 2021-12-06 18:17:31
+(epstopdf)                    size: 471305 bytes
+(epstopdf)             Output file: <Comp10PZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 18:19:39
+(epstopdf)                    size: 791508 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Comp10P
+Z-eps-converted-to.pdf Comp10PZ.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Comp10PZ-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Comp10PZ-eps-converted-to.pdf, id=181, 511.9125pt x 284.06125pt>
+File: Comp10PZ-eps-converted-to.pdf Graphic file (type pdf)
+<use Comp10PZ-eps-converted-to.pdf>
+Package pdftex.def Info: Comp10PZ-eps-converted-to.pdf  used on input line 121.
+
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 123--638
+ [][] 
+ []
+
+[28 <./Comp10X-eps-converted-to.pdf> <./Comp10XZ-eps-converted-to.pdf>]
+(Comp10PZZ.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Comp10PZZ.eps>
+(epstopdf)                    date: 2021-12-06 18:22:14
+(epstopdf)                    size: 72561 bytes
+(epstopdf)             Output file: <Comp10PZZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 18:22:55
+(epstopdf)                    size: 136065 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Comp10P
+ZZ-eps-converted-to.pdf Comp10PZZ.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Comp10PZZ-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Comp10PZZ-eps-converted-to.pdf, id=189, 511.9125pt x 284.06125pt>
+File: Comp10PZZ-eps-converted-to.pdf Graphic file (type pdf)
+<use Comp10PZZ-eps-converted-to.pdf>
+Package pdftex.def Info: Comp10PZZ-eps-converted-to.pdf  used on input line 116
+.
+(pdftex.def)             Requested size: 512.14558pt x 284.48962pt.
+)
+Overfull \hbox (11.61555pt too wide) in paragraph at lines 118--643
+ [][] 
+ []
+
+(Comp10.tex (C:\Program Files\MiKTeX\tex/latex/base\cp1252.def
+File: cp1252.def 2021/02/14 v1.3d Input encoding file
+)
+Package epstopdf Info: Source file: <Comp10.eps>
+(epstopdf)                    date: 2021-12-06 21:05:03
+(epstopdf)                    size: 523448 bytes
+(epstopdf)             Output file: <Comp10-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-06 21:05:24
+(epstopdf)                    size: 730950 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=Comp10-
+eps-converted-to.pdf Comp10.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Comp10-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<Comp10-eps-converted-to.pdf, id=190, 341.275pt x 312.16624pt>
+File: Comp10-eps-converted-to.pdf Graphic file (type pdf)
+<use Comp10-eps-converted-to.pdf>
+Package pdftex.def Info: Comp10-eps-converted-to.pdf  used on input line 118.
+(pdftex.def)             Requested size: 341.39912pt x 312.97523pt.
+) [29 <./Comp10PZ-eps-converted-to.pdf> <./Comp10PZZ-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 651--654
+
+ []
+
+[30 <./Comp10-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 689--692
+
+ []
+
+<NotMycircuit.jpg, id=203, 648.021pt x 431.211pt>
+File: NotMycircuit.jpg Graphic file (type jpg)
+<use NotMycircuit.jpg>
+Package pdftex.def Info: NotMycircuit.jpg  used on input line 696.
+(pdftex.def)             Requested size: 259.2038pt x 172.48134pt.
+[31]
+<Mycircuit.jpg, id=208, 233.673pt x 199.947pt>
+File: Mycircuit.jpg Graphic file (type jpg)
+<use Mycircuit.jpg>
+Package pdftex.def Info: Mycircuit.jpg  used on input line 702.
+(pdftex.def)             Requested size: 186.93864pt x 159.95781pt.
+<ltspice.jpg, id=209, 1140.05925pt x 248.72925pt>
+File: ltspice.jpg Graphic file (type jpg)
+<use ltspice.jpg>
+Package pdftex.def Info: ltspice.jpg  used on input line 712.
+(pdftex.def)             Requested size: 456.01563pt x 99.48993pt.
+ [32 <./NotMycircuit.jpg> <./Mycircuit.jpg> <./ltspice.jpg>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+21.
+
+(C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 721.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 7
+34.
+
+(C:\Program Files\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 734.
+ [33]
+Overfull \hbox (21.2151pt too wide) in paragraph at lines 798--799
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (21.2151pt too wide) in paragraph at lines 823--824
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.2151pt too wide) in paragraph at lines 848--849
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35] [36] [37] (Project.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 44826 strings out of 478681
+ 1158781 string characters out of 2856388
+ 1803973 words of memory out of 3000000
+ 62188 multiletter control sequences out of 15000+600000
+ 412877 words of font info for 63 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,13n,103p,789b,1530s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on Project.pdf (37 pages, 20518992 bytes).
+PDF statistics:
+ 287 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
+
