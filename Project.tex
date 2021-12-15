@@ -28,7 +28,7 @@
 \usepackage[italian]{babel}
 \usepackage{float}
 \usepackage[utf8]{inputenc}
-
+\usepackage{listings}
 
 \newcommand{\vv}{\vec{v}}
 \newcommand{\vw}{\vec{w}}
@@ -67,6 +67,11 @@
 \begin{document}
 
 \maketitle 
+\section{Abstract}
+L'obiettivo di questo progetto è studiare le proprietà caratteristiche dell'oscillatore di Van Der Pol e verificarle sperimentalmente mediante delle simulazioni numeriche con dei codici scritti in C++. In particolare si vuole osservare il comportamento rigido di questa equazione differenziale e osservare come cambiano le soluzioni variando il timestep. In seguito si vuole calcolare l'ordine di accuratezza del metodo numerico utilizzato per confrontarlo con il valore atteso. \\
+Inoltre si vogliono studiare i modelli matematici che applicano i concetti del modello di Van Der Pol e che derivano da esso, quali il modello Zeeman, che descrive la dinamica di una cellula cardiaca o il modello di FitzHugh-Nagumo. Riguardo il modello Zeeman si vuole anche fare una simulazione in cui due cellule si sincronizzano e autosostengono il loro moto stimolandosi a vicenda. \\
+Si è anche considerato il problema dell'oscillatore di Van Der Pol forzato, che presenta un comportamento caotico per smorzamenti caratteristici, e si è cercato di riprodurre questo fenomeno mediante una simulazione in C++ e di calcolare l'esponente di Ljapounov, per poi cercare di riprodurre il suono prodotto e confrontarlo con quello atteso, cercando di riprodurre il rumore udito da Van Der Pol e dai suoi colleghi, che portò allo studio del caos deterministico. \\
+Infine si vuole parlare dei circuiti elettronici che presentano un comportamento simile a quello descritto dall'equazione di Van Der Pol e si vuole simulare uno di questi su LtSpice, per confronare i risultati ottenuti con gli andamenti attesi.
 \section{L'oscillatore di Van Der Pol}
 \subsection{Descrizione}
 L'oscillatore di Van Der Pol è un sistema dinamico composto da un oscillatore smorzato, descritto dalla seguente equazione:
@@ -74,10 +79,10 @@ L'oscillatore di Van Der Pol è un sistema dinamico composto da un oscillatore s
 	\ddot{x} - \mu(1-x^2)\dot{x} + x = 0
 \end{equation}
 dove $x(t)$ indica l'oscillazione nello spazio delle configurazioni in funzione del tempo e $\mu$ è una costante che indica lo smorzamento. Il termine di mezzo dell'equazione è quello responsabile dello smorzamento, e quindi dell'attrito. 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=.4]{Spazio delle fasi oscillatore} 
-	\caption{Questa figura mostra traiettorie caratteristiche dell'oscillatore di Van Der Pol nello spazio delle fasi per vari punti iniziali. Si noti anche che l'orientamento del campo vettoriale indirizza tutti i punti materiali verso la stessa traiettoria limite.}
+	\caption{Traiettoria caratteristica dell'oscillatore di Van Der Pol.}
 \end{figure}
 Si nota subito che nel caso in cui la costante di smorzamento $\mu$ abbia valore nullo, si ottiene un oscillatore armonico classico, e questo verrà verificato nelle sezioni successive mediante simulazioni al computer e esperimenti mediante circuiti elettronici. 
 \subsubsection{Studio dell'equazione differenziale}
@@ -108,6 +113,7 @@ e si ottiene quindi una cubica. Studiamo quindi il grafico di questa funzione:
 \begin{figure}[H]
 	\centering
 	\input{VecField.tex}
+	\caption{Grafico che mostra la cubica $F(x)$ e il campo vettoriale $\vec{V}(x,y) = (\dot{x},\dot{y})$.}
 \end{figure}
 Vediamo che $\dot{w} = 0$ solo per $x=0$, ovvero quando siamo sull'asse delle $y$, e si trova in particolare che sopra l'asse delle $x$ i vettori del campo vettoriale puntano a destra, mentre sotto l'asse delle $x$ puntano a sinistra. Il punto di massimo locale della funzione è $\left(-1,\frac{2}{3}\mu\right)$, mentre il punto di minimo locale è $\left(1,-\frac{2}{3}\mu\right)$. In più vediamo che i punti di intersezione tra le orizzontali che passano per i punti di massimo e minimo con la curva $w$ sono rispettivamente $\left(2,\frac{2}{3}\mu\right)$ $\left(-2,-\frac{2}{3}\mu\right)$. \\
 Se consideriamo valori di $\mu$ molto più grandi di 1, vediamo che sarebbe ragionevole riscalare di nuovo le variabili:
@@ -119,7 +125,7 @@ Se consideriamo valori di $\mu$ molto più grandi di 1, vediamo che sarebbe ragi
 \end{equation}
 Così si ottiene un grafico uguale a quello di prima ma senza i valori di $\mu$. \\
 Fuori dalla curva $\dot{x} = 0$ si ha che $\dot{x}$ è molto grande, mentre $\dot{y}$ è quasi nullo. Questo vuole dire che se mettiamo una particella fuori dalla curva, questa verrà spostata orizzontalmente molto velocemente fino a posizionarsi sulla curva, e subirà anche una piccola accelerazione verticale nella direzione verso la curva. A questo punto la particella si muoverà lentamente sulla curva fino a uno dei vue punti critici, e una volta raggiunti accelererà molto velocemente fino al secondo, in corrispondenza del quale si muoverà molto più lentamente. \\
-Si ottiene così un ciclo limite in cui la velocità della particella varia continuamente. In particolare notiamo che più il valore di $\mu$ è grande, più la curva si muoverà lentamente vicino ai punti di minimo/massimo e velocemente lontano da essi. Questo spiega la forma delle traiettorie viste nelle figure $$ a $$ e sarà inoltre dimostrato visivamente con delle animazioni.
+Si ottiene così un ciclo limite in cui la velocità della particella varia continuamente. In particolare notiamo che più il valore di $\mu$ è grande, più la curva si muoverà lentamente vicino ai punti di minimo/massimo e velocemente lontano da essi. Questo spiega la forma delle traiettorie viste nella figura 4 e sarà inoltre dimostrato visivamente con delle animazioni.
 \subsubsection{Studio della stabilità }
 Per studiare la stabilità dell'oscillatore di Van Der Pol e la dipendenza della stessa dalla costante di smorzamento $\mu$, si usa il metodo di Lyapunov: \\ \\
 \textbf{Primo teorema di Lyapunov: \\}
@@ -141,7 +147,7 @@ Prima di tutto definiamo una nuova variabile $y = \dot{x}$, in modo da passare d
 		\dot{y} = \mu(1-x^2)y - x
 	\end{cases}
 \end{equation}
-Queste equazioni rappresentano le equazioni del moto dell'oscillatore nello spazio della fasi e possono essere usate per trovare numericamente le traiettorie limite, come si vedrà nella sezione 2. \\
+Queste equazioni rappresentano le equazioni del moto dell'oscillatore nello spazio della fasi e possono essere usate per trovare numericamente le traiettorie limite, come si vedrà nella prossima sezione. \\
 Consideriamo ora una funzione $V(\vec{x},t)$ del tipo 
 \begin{equation}
 	V(\vec{x},t) = \frac{1}{2}(x^2 + y^2)
@@ -161,23 +167,22 @@ Dallo studio della stabilità dell'oscillatore con il metodo di Lyapunov si trov
 -Se $\mu>0$, si ha che l'origine è un punto instabile e la particella si allontana da esso, fino ad arrivare su una traiettoria limite che è stabile. Si dice quindi che quella traiettoria è attrattiva. 
 
 -Se $\mu<0$, si ha che l'origine è un punto attrattivo, quindi le traiettorie subiscono una degenerazione attorno ad essa. \\
-\begin{center}
+\begin{figure}[H]
+	\centering
 	\includegraphics[scale=0.7]{Traiettorie}
-\end{center}
+	\caption{Traiettorie nello spazio delle fasi, rispettivamente per $\mu$ negativi e positivi.}
+\end{figure}
 Per valori di $\mu$ positivi, ovvero per cui si hanno delle traiettorie limite che attraggono i punti nello spazio delle fasi, si nota che l'ambiezza di queste curve cresce con lo smorzamento. \\
 Come accennato in precedenza, nel caso particolare in cui $\mu = 0$, il sistema si riduce a un oscillatore armonico, quindi la traiettoria sarà una circonferenza.
-\begin{center}
+\begin{figure}[H]
+	\centering
 	\includegraphics[scale=1]{Vari smorzamenti} 
-\end{center}
-\subsection{Storia}
-L'oscillatore di Van Der Pol è stato ideato originariamente dall'ingegnere elettrico olandese Balthasar Van Der Pol. Van Der Pol scoprì delle oscillazioni stabili, che in seguito chiamò rilassamento-oscillazioni e che sono un tipo ci ciclo limite nei circuiti elettrici che utilizzano i vacuum tubes. \\
-Quando questi circuiti venivano portati vicino al ciclo limite,. \\
-Van Der Pol e i suoi colleghi scoprirono inoltre che a certe frequenze si sentiva un rumore irregolare, che più avanti verrà attribuito al caos deterministico. 
+	\caption{Traiettorie nello spazio delle fasi per vari valori di $\mu$.}
+\end{figure} 
 \subsection{Applicazioni}
 \subsubsection{I neuroni e le cellule cardiace}
 Un neurone può creare un potenziale di propagazione, che ha una crescita molto rapida, seguita da una decrescita e una stabilizzazione attorno a uno zero. Mediante la propagazione di questo potenziale il neurone può "comunicare con gli altri neuroni". \\
-Le cellule cardiache invece sono cellule muscolari in grado di contrarsi ed estendersi. Tali cellule sono caratterizzate dalla capacità di propagare un segnale (come fanno i neuroni) alle cellule adiacenti, inducendone così la contrazione. Quello che accade di solito è che una prima particella viene eccitata da uno stimolo esterno che ne causa una contrazione, che poi si propaga alle cellule adiacenti, generando una sorta di onda di contrazioni di cellule. Se riportiamo in un grafico la contrazione della cellula cardiaca, $x$, in funzione di un segnale elettrico $b$ che causa la contrazione, cioè lo stimolo esterno, si ottiene il grafico \\ \\ \\
-e si vede un comportamento molto simile a quello dell'oscillatore di Van Der Pol:
+Le cellule cardiache invece sono cellule muscolari in grado di contrarsi ed estendersi. Tali cellule sono caratterizzate dalla capacità di propagare un segnale (come fanno i neuroni) alle cellule adiacenti, inducendone così la contrazione. Quello che accade di solito è che una prima particella viene eccitata da uno stimolo esterno che ne causa una contrazione, che poi si propaga alle cellule adiacenti, generando una sorta di onda di contrazioni di cellule. Se riportiamo in un grafico la contrazione della cellula cardiaca, $x$, in funzione di un segnale elettrico $b$ che causa la contrazione, cioè lo stimolo esterno, si ottiene un grafico (figura 6) che presenta un comportamento molto simile a quello dell'oscillatore di Van Der Pol:
 La contrazione parte lentamente, per poi accentuarsi ad un certo punto, in cui la lunghezza $x$ varia molto velocemente, e questo processo ripetuto crea un moto periodico. \\ \\
 Il modello che usiamo per rappresentare questo sistema è
 \begin{equation}
@@ -190,6 +195,7 @@ A questo punto poniamo le derivate nulle e studiamo le nullcline:
 \begin{figure}[H]
 	\centering
 	\input{NeuronNullcline2.tex}
+	\caption{Nullcline delle equazioni del modello Zeeman.}
 \end{figure}
 La nullclina della seconda equazione è una retta verticale, mentre la nullclina della prima equazione è una cubica. Le due nullcline si intersecano in un punto di equilibrio $(x_0,b_0)$. \\ 
 Essendo tale punto un punto di equilibrio, il sistema tenderà a tornarci quando perturbato da quella condizione. I punti $A$ e $B$ invece sono punti instabili. Vista l'instabilità dei punti $A$ e $B$, se il sistema si avvicina ad essi, esso viene spinto verso il ramo opposto della nullclina molto velocemente, perchè $\varepsilon$ è un parametro piccolo quindi il suo inverso diventa grande. A questo punto il sistema si avvicinerà verso l'altro punto instabile e verrà di nuovo spinto verso l'altro ramo, tornando così al punto di partenza. \\ \\
@@ -233,9 +239,11 @@ Si ottiene così che, inserendo nell'equazione una funzione periodica $x^*(t)$, 
 		\dfrac{db}{dt} = x - x^*(t)
 	\end{cases}
 \end{equation}
-e risolvendo questa equazione si ottiene un ciclo molto simile a quello dell'oscillatore di Van Der Pol. \begin{figure}[H]
+e risolvendo questa equazione si ottiene un ciclo molto simile a quello dell'oscillatore di Van Der Pol. 
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{Heartbeat}
+	\caption{Traiettoria per una cellula descritta dal modello Zeeman.}
 \end{figure}
 A questo punto si può pensare di accoppiare due neuroni, e usare la contrazione di uno per stimolare l'altro. Si costruiscono due sistemi descritti dalle seguenti equazioni
 \begin{equation}
@@ -249,6 +257,36 @@ A questo punto si può pensare di accoppiare due neuroni, e usare la contrazione
 	\end{cases}
 \end{equation}
 e vediamo che così facendo ognuno dei due sente lo stimolo dell'altro, e così riusciamo a sostenere l'onda senza bisogno di uno stimolo esterno. Quindi $b$ e $b'$ non rappresentano più uno stimolo esterno, ad esempio una corrente, bensì rappresentano lo stimolo che un neurone esercita sull'altro. \\
+Si è simulata la sincronizzazione di due cellule mediante un codice che risolve prima l'equazione differenziale per una cellula, e usa la soluzione per risolvere l'equazione per la seconda. \\
+Nella simulazione si sono usati i seguenti parametri: $T=4$, $\varepsilon=0.01$, $x(0) = 0.65$ e $y(0) = -0.65$ 
+\begin{figure}[H]
+\ \ \ \ 
+\begin{minipage}[b]{0.4\textwidth}
+	\centering
+	\scalebox{0.7}{\input{Sincro.tex}}
+	\caption{Cellule sincronizzate (T=4).}
+\end{minipage}
+\ \ \ \ \ \ \ \ \ \ 
+\begin{minipage}[b]{0.4\textwidth}
+	\centering
+	\scalebox{0.7}{\input{Sincro3-7.tex}}
+	\caption{Cellule con $T_1 = 4$ e $T_2 = 3.7$.}
+\end{minipage}
+\end{figure}
+\begin{figure}[H]
+	\ \ \ \ 
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\scalebox{0.7}{\input{Sincro3-5.tex}}
+		\caption{Cellule con $T_1 = 4$ e $T_2 = 3.5$.}
+	\end{minipage}
+	\ \ \ \ \ \ \ \ \ \ 
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\scalebox{0.7}{\input{Sincro2.tex}}
+		\caption{Cellule con $T_1 = 4$ e $T_2 = 2$.}
+	\end{minipage}
+\end{figure}
 A questo punto si potrebbe creare una catena di neuroni, dove il primo viene stimolato da uno stimolo esterno, il secondo viene stimolato dal primo e a sua volta stimola il terzo e così via, creando così un'onda.
 \subsubsection{Il modello di FitzHugh-Nagumo}
 Il modello migliore e più preciso dal punto di vista fisiologico per descrivere un neurone è il modello di Hodgkin-Huxley. Tuttavia questo modello presenta diverse complicazioni, la principale delle quali è la sua estrema non linearità, che esibisce comportamenti caotici che sono difficili da studiare in quattro dimensioni. \\
@@ -270,6 +308,7 @@ L'intersezione tra le due nullcline rappresenta i punti di equilibrio, e in ques
 \begin{figure}[H]
 	\centering
 	\input{FHNNullcline.tex}
+	\caption{Nullcline delle equazioni del modello di FitzHugh-Nagumo.}
 \end{figure}
 A questo punto studiamo i segni delle derivate, e quindi il campo vettoriali. \\
 Se siamo sopra la cubica, la derivata delle $V$ è negativa, mentre questa derivata è positiva sotto alla cubica. La retta invece definisce la derivata della $W$, e tale derivata è negativa sopra alla retta e positiva sotto di essa. In questo modo si divide lo spazio delle fasi in 4 regioni dove i segni delle componenti del campo vettoriale sono diversi, e vediamo che, come per l'oscillatore di Van Der Pol, questo campo ha la funzione di riportare il punto sulla nullclina cubica. \\
@@ -315,8 +354,93 @@ $$
 e vediamo che i due termini dominanti, cioè $V^4$ e $W^2$, sono negativi, quindi molto lontano dall'origine il sistema non può espandersi all'infinito. Quello che si trova è una biforcazione di Hopf, ovvero il sistema si espande da un punto fino a che non arriva a un ciclo limite, cioè una traiettoria percorsa che diventa anche attrattiva (e questo fu uno dei primi esempi in cui si vide che oltre ai punti, anche delle intere traiettorie possono essere attrattive). \\
 Questo comportamento era caratteristico dell'oscillatore di Van Der Pol e mostra un'ulteriore collegamento tra questi due importanti modelli. \\ \\
 Anche in questo caso è possibili accoppiare due neuroni, che si accoppieranno e si stimoleranno a vicenda, autosostenendo le loro traiettorie.
+\subsection{Teoria del caos in breve}
+Quando si parla di caos si intende una teoria scientifica e matematica che riguarda l'evoluzione temporale di sistemi dinamici altamente sensibili alle condizioni iniziali e la cui evoluzione appare casuale e priva di una legge deterministica sottostante. \\
+Secondo la teoria del caos, questi sistemi dinamici in realtà possiedono una legge deterministica che ne governa l'evoluzione, ma risulta molto difficile fare previsioni accurate a partire dalla conoscenza sullo stato attuale del sistema. Data questa difficoltà nel prevederne l'evoluzione, allora appare che tali sistemi evolvano casualmente e senza una legge deterministica.
+Tuttavia, poiché (secondo tale teoria) questi sistemi hanno una legge che li governa, allora la loro evoluzione è in realtà determinata a partire dallo stato attuale (ecco perché si parla di caos  deterministico, o semplicemente caos). \\
+I sistemi caotici sono sistemi dinamici governati da leggi non lineari e sensibili alle condizioni iniziali: ciò significa che a partire da due condizioni iniziali molto vicine (indicate con $x_0$ e $x_0 + \varepsilon$), le due evoluzioni del sistema nel tempo (indicate con $x(t)$) si discosteranno sempre di più tra loro, a differenza di ciò che accade con sistemi non caotici.
+In particolare, ciò che si osserva è che durante una certa scala di tempo le evoluzioni temporali possono essere predette con una certa accuratezza, successivamente iniziano manifestamente a discostarsi e diventare imprevedibili. Tale scala di tempo è legata ad alcuni fattori, come:
+
+1) L'accuratezza con cui possono essere misurate le condizioni sullo stato attuale del sistema. 
+
+2) Il tempo di Lyapunov. \\ 
+Il tempo di Lyapunov è una scala di tempo dipendente dalla dinamica del sistema, legato a sua volta all'esponente di Lyapunov $\lambda$, in particolare è definito come $\tau = \lambda_{max}^{-1}$, in cui $\lambda_{max}$ è il massimo esponente di Lyapunov del sistema.
+
+\subsubsection{Esponente di Lyapunov}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Lyap_Exp}
+	\caption{Rappresentazione che mostra il significato dell'esponente di Lyapunov nel contesto dei sistemi caotici.}
+\end{figure}
+
+Tale quantità è indice di quanto due traiettorie vicine tendono a discostarsi con l'evolvere del sistema nel tempo, quindi di quanto il sistema è sensibile alle  condizioni  iniziali.
+Per quanto detto precedentemente, i sistemi caotici sono molto sensibili alle condizioni iniziali, perciò date due condizioni iniziali arbitrariamente vicine $x_0$ e $x_0 + \delta(0)$, le loro traiettorie $x(t)$ si discosteranno.\\
+Si assume generalente che per molti sistemi caotici la distanza tra le traiettorie cresca in maniera esponenziale (si usa l'esponenziale poiché è la più semplice funzione avente un'elevata crescita nel tempo): allora si può definire l'esponente di Lyapunov, essendo $|\delta(t)|$ la distanza tra le traiettorie in funzione del tempo e $|\delta(0)|$ la distanza tra le due condizioni iniziali:
+$$
+|\delta(t)| \approx |\delta(0)|e^{\lambda t}
+$$
+Da tale condizione si può ricavare una stima per l'esponente di Lyapunov:
+\begin{equation}
+	\lambda =\lim_{t\to\infty} \lim_{\delta(0)\to 0} \frac{1}{t}\ln{\frac{|\delta(t)|}{|\delta(0)|}}
+\end{equation}
+Se si considera un sistema tempo  discreto, in cui l'evoluzione è data da una iterazione $x_{t+1} = f(x_t)$, si può scrivere l'esponente di Lyapunov come legato alla distanza tra l'iterazione al tempo $t$ sulle due diverse condizioni iniziali:
+$$
+|f^t(x_0 + \delta)-f^t(x_0)| \approx \delta e^{\lambda t}
+$$
+\begin{equation}
+	\lambda =\lim_{t\to\infty} \frac{1}{t}\ln{\left|\frac{df^t}{dx}(x_0)\right|}
+\end{equation}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale = 0.6]{Lyap_Exp_Calc}
+	\caption{Rappresentazione che mostra la procedura utilizzata per la stima numerica dell'esponente di Lyapunov.}
+	\label{Ly}
+\end{figure}
+Se non si ha a disposizione una espressione per la funzione $f(x_t)$ in Eq. 14 si può ricorrere ad una stima dell'esponente di Lyapunov mediante calcolo numerico: la procedura è schematizzata in Fig. \ref{Ly}.
+Si parte da due punti nello spazio delle fasi con condizioni iniziali  $x_0$ e $x_1 = x_0 + \delta(0)$ separate da una distanza $\delta(0)$. Questi due punti vengono fatti evolvere per un certo tempo $\tau$, dopo il quale la loro distanza sarà diventata $\delta(\tau))$, dopodiché quest'ultima viene riscalata in modo da reimpostarla al valore iniziale $\delta(0)$ e si procede iterativamente, trovando tanti valori $\delta(n\tau)$. La procedura è iterata fino ad un tempo $t$ (che dovrebbe essere abbastanza grande).
+La stima per l'esponente di Lyapunov è allora la seguente media temporale:
+\begin{equation}
+	\lambda = \frac{1}{t}\sum_{n} \ln\left(\frac{\delta(n \tau)}{\delta(0)}\right)
+\end{equation}
+
+L'esponente di Lyapunov è una proprietà dell'orbita del sistema, non del singolo punto, perciò è una proprietà globale. Esso fornisce una stima, come detto precedentemente, di quanto due orbite si discostano a partire da una differenza $\delta(0)$ nelle condizioni iniziali.
+Se un sistema ha un esponente di Lyapunov negativo allora significa che due orbite inizialmente  vicine tenderanno ad avvicinarsi sempre di più.
+Viceversa, se un sistema ha esponente di Lyapunov positivo allora due orbite tenderanno ad allontanarsi e divergere. Quest'ultima è una condizione che esprime la proprietà di sensitività alle condizioni iniziali di un sistema dinamico ed è una condizione richiesta affinché un sistema sia caotico. \\ \\
+Risulta particolarmente importante riflettere sul significato del $\delta(0)$ introdotto: esso rappresenta una differenza numerica tra due possibili condizioni iniziali da cui si suppone inizi l'evoluzione del sistema dinamico oggetto di studio.
+Questa differenza può essere pensata come un errore (incertezza sperimentale) nella conoscenza della condizione iniziale da cui si vuole prevedere il futuro dell'evoluzione del sistema.
+Da qui emerge l'importanza dell'esponente di Lyapunov nel contesto dei sistemi complessi, poiché fornisce una stima del tempo di predittività del sistema. \\
+Si supponga allora di avere un'incertezza $\delta(0)$ sulle condizioni iniziali (fisicamente questa può essere rappresentata da un'incertezza sulla posizione di un corpo in moto, o sulla sua velocità, su una tensione o qualsiasi altra grandezza).
+Tale incertezza crescerà quindi esponenzialmente, come precedentemente detto, secondo $\delta(t) \approx \delta(0)e^{(\lambda t)}$. \\
+L'incertezza è legata alla predittività del sistema. Il sistema diventerà imprevedibile quando l'incertezza diventerà $O(1)$. \\
+Si può allora stimare il \textit{tempo di predittività} come:
+$$
+\delta(0)e^{\lambda t_p} \approx 1
+$$
+da cui si esplicita il tempo $t_p$:
+\begin{equation}
+	t_p = -\frac{\ln(\delta(0))}{\lambda}.
+\end{equation}
+
 \subsection{Varianti: L'oscillatore di Van Der Pol forzato}
 
+Una variante dell'oscillatore di Van der Pol è stata studiata (già da Van der Pol stesso): si tratta dell'oscillatore di Van der Pol forzato.
+Tale tipologia di oscillatore è governato dalla stessa equazione differenziale vista nella sezione 1.1, a cui è aggiunta una forzante sinusoidale (quindi periodica, di periodo $T_F$ e frequenza $f_F = 1/T_F$).
+L'equazione dell'oscillatore forzato diventa quindi:
+$$
+\ddot{x} - \mu(1-x^2)\dot{x} + x = Acos(2\pi f_F t)
+$$
+che si può riscrivere come:
+\begin{equation}
+	\label{EqForced}
+	\ddot{x} - \mu(1-x^2)\dot{x} + x - Acos(2\pi f_F t) = 0
+\end{equation}
+Questa equazione differenziale descrive perciò un oscillatore di Van der Pol che viene stimolato da una forzante esterna, con una certa frequenza $f_F$. \\
+Lo studio di tale sistema è molto interessante poiché presenta delle soluzioni caotiche per alcuni valori del parametro $\mu$. \\
+Si osserva in Fig. \ref{VDPF} un esempio di soluzione $x(t)$ per l'oscillatore forzato. Si nota un comportamento caotico nella forma della soluzione: con picchi e irregolarità.\\
+Storicamente Balthasar Van der Pol ed il suo collega van der Mark furono tra i primi ad osservare questo comportamento tipico del caos deterministico in un circuito elettrico.
+Nella sezione 3.1 sono riportati ulteriori approfondimenti, analisi e simulazioni dell'oscillatore di Van der Pol forzato.
 \section{Soluzione numerica e simulazione}
 Per risolvere l'equazione differenziale dell'oscillatore è stato scritto un codice in C++, che ha permesso di trovare i valori di $x$ per dei valori di tempo discretizzati $t = n\Delta$. Per fare ciò si è partiti dall'equazione 2, ma per permettere al computer di interpretarla la si è dovuta discretizzare, ottenendo il seguente sistema:
 \begin{equation}
@@ -325,17 +449,18 @@ Per risolvere l'equazione differenziale dell'oscillatore è stato scritto un cod
 	y_{n+1} = y_n + \left(\mu(1-x_n^2)y_n - x_n\right)\Delta
 	\end{cases}
 \end{equation} 
-Sulla base di questo sistema di equazioni discretizzate è stato quindi scritto il seguente codice: \\ \\ \\
+Sulla base di questo sistema di equazioni discretizzate è stato scritto il codice presente in appendice. \\
 Come di vede, questo codice prende come parametri di entrata le coordinate iniziali $x_0$ e $y_0$, il parametro di smorzamento $\mu$ e lo step temporale $\Delta$. L'ultimo parametro è il tempo $t$, e scegliendo questo valore si ottengono i valori della $x$ per ogni istante temporale precedente al $t$ scelto. \\
 	Mediante questo codice vogliamo osservare certe caratteristiche dell'oscillatore: \\
 1) Vogliamo osservare la traiettoria caratteristica di un punto nello spazio delle fasi. \\
 2) Vogliamo confrontare traiettorie diverse con stesse coordinate iniziali ma con diversi valori del parametro di smorzamento. \\
-3) Vogliamo osservare un comportamento particolare del modello di Van Der Pol, ovvero che se prendiamo un insieme di tanti punti distribuiti in modo casuale nello spazio delle fasi, dopo poche iterazioni questi seguono tutti la stessa traiettoria, che è quindi una curva attrattrice. \\
+3) Vogliamo verificare l'attrattivita del ciclo limite. \\
 4) Vogliamo infine osservare l'andamento temporale della posizione $x$ della particella. \\
 Partiamo dal primo obiettivo, ovvero la traiettoria carattestistica: 
 \begin{figure}[H]
 	\centering
-	\scalebox{0.9}{\input{Schema1-5.tex}}
+	\scalebox{0.7}{\input{Schema1-5.tex}}
+	\caption{Traiettoria nello spazio delle fasi per $\mu = 1.5$.}
 \end{figure}
 Nella figura soprastante si può vedere la traiettoria caratteristica dell'oscillatore di Van Der Pol. Come è stato spiegato nelle sezioni precedenti, la velocità del punto che si muove secondo questa traiettoria non è affatto costante.
 Come si può notare dall'animazione infatti, il punto si muove molto più velocemente nei lati corti della traiettoria e più lentamente nei lati lunghi. Si avrà quindi un accumulo di punti in corrispondenza dei punti in cui il momento cambia segno,
@@ -343,23 +468,29 @@ che nel grafico soprastante si trovano in corrispondenza dei punti $(-2,0)$ e $(
 Nell'immagine sottostante si può vedere uno degli ultimi frame dell'animazione citata in precedenza e si vede chiaramente che nei lati corti si hanno degli accumuli di punti, mentre lungo i lati lunghi i punti si distribuiscono in maniera molto meno densa. 
 \begin{figure}[H]
 	\centering
-	\input{LastFrame.tex}
+	\scalebox{0.7}{\input{LastFrame.tex}}
+	\caption{Ultimo frame dell'animazione. }
 \end{figure}
 Vogliamo ora confrontare le traiettorie di particelle aventi stesse coordinate iniziali ma diverse costanti di smorzamento. \\
-Ci aspettiamo che il grafico ottenuto dalla simulazione numerica sia simile a quello visto in figura $$ afads $$. Dalla simulazione si ottiene il seguente grafico: \\ \\ \\ \\ \\
-che riporta l'andamento atteso. Studiamo questo grafico: \\
-La cosa principale che si nota è che, con l'aumentare del valore di $\mu$, la traiettoria si allunga e assume una forma pià angolata. Il motivo di questo comportamento è stato spiegato nella sezione precedente e deriva dallo studio dell'equazione differenziale. \\
+Ci aspettiamo che il grafico ottenuto dalla simulazione sia simile a quello visto in figura 3. Dalla simulazione si ottiene il seguente grafico: 
+\begin{figure}[H]
+	\centering
+	\scalebox{0.7}{\input{MuDiversi.tex}}
+	\caption{Confronto tra traiettorie con $\mu=1,2,3$.}
+\end{figure}
+che riporta l'andamento atteso. La cosa principale che si nota è che, con l'aumentare del valore di $\mu$, la traiettoria si allunga e assume una forma pià angolata. Il motivo di questo comportamento è stato spiegato nella sezione precedente e deriva dallo studio dell'equazione differenziale. \\
 Vogliamo ora considerare le traiettorie in corrispondenza di valori piccoli di $\mu$. 
 \begin{figure}[H]
 	\centering
-	\input{Collasso.tex}
+	\scalebox{0.75}{\input{Collasso.tex}}
+	\caption{Traiettoria nello spazio delle fasi per $\mu = -0.5$.}
 \end{figure}
 Nel grafico soprastante si vede che la particella parte vicino all'origine e viene attratta verso essa, percorrendo quindi delle orbite che degenerano fino a collassare in un punto.
-Vogliamo ora studiare un comportamento molto interessante di questo tipo di oscillatore che è stato accennato nelle pagine precedenti. \\
-Consideriamo una situazioni iniziale come quella nel grafico seguente 
+Vogliamo ora studiare l'attrattività del ciclo limite: Consideriamo una situazioni iniziale come quella nel grafico seguente
 \begin{figure}[H]
 	\centering
-	\input{FirstFrame.tex}
+	\scalebox{0.75}{\input{FirstFrame.tex}}
+	\caption{Primo frame dell'animazione.}
 \end{figure}
 quindi una situazione in cui abbiamo un grande numero di punti (in questo caso ne sono stati plottati 300) che sono distribuiti randomicamente nello spazio delle fasi, quindi con momento iniziale e coordinata $x$ iniziale randomici. \\
 Se lasciamo partire questi punti, sembra inizialmente che questi si muovano in modo caotico, ma dopo una decina di iterazioni si vede che le particelle stanno in realtà andando a formare una stessa traiettoria, che è la traiettoria caratteristica dell'oscillatore di Van Der Pol. \\
@@ -368,6 +499,7 @@ Questo comportamento peculiare è un'altra dimostrazione del fatto che la traiet
 Infine si vuole studiare l'andamento temporale della $x$. 
 \begin{figure}[H]
 	\input{AndTemp.tex}
+	\caption{Andamento temporale della $x(t).$}
 \end{figure}
 Nella figura soprastante si vede che l'andamento della $x$ ricorda vagamente una sinusoide, per la periodicità, ma ha una forma molto più aguzza. Si nota inoltre che la forma della funzione tra un punto di minimo e un punto di massimo e viceverda mantiene la stessa forma, ma risulta capovolta. \\
 Si nota inoltre che la forma della funzione tra un punto di minimo e un punto di massimo e viceverda mantiene la stessa forma, ma risulta capovolta. \\
@@ -375,6 +507,51 @@ La forma di queste oscillazioni cambia molto con il valore della costante di smo
 Per rendere l'idea in un modo tutt'altro che rigoroso, per valori piccoli di $\mu$ l'andamento ha una forma che ricorda il dente di un lupo, mentre per valori grandi ha una forma che ricorda il dente di uno squalo. \\ \\ 
 Questo è l'andamento temporale nel caso dell'oscillatore non forzato. \\
 Per un oscillatore forzato si troverebbe un andamento vagamente simile a questo, ma con una forma molto più irregolare. Questo è dovuto al fatto che in un'oscillatore del genere, una forzante periodica producerebbe una caoticità, che renderebbe quindi molto più imprevedibile la traiettoria.
+\subsection{Simulazione dell'oscillatore forzato}
+Come per la versione standard, sono state eseguite simulazioni anche per l'oscillatore di Van der Pol forzato. Innanzitutto è stata risolta l'equazione differenziale (Eq. \ref{EqForced}) mediante lo stesso metodo utilizzato precedentemente (e quindi anche lo stesso codice C++).
+Si è ottenuto il sistema discretizzando il tempo:
+\begin{equation}
+	\begin{cases}
+		x_{n+1} = x_n + y_n\Delta \\
+		y_{n+1} = y_n + \left( \mu(1-x_n^2)y_n-x_n+A\cos(2\pi f_F)\right) \Delta
+	\end{cases}
+\end{equation}
+Tramite il programma scritto sono state risolte alcune equazioni differenziali per osservare il comportamento dell'oscillatore forzato nei diversi regimi.
+Nelle simulazioni sono stati assunti i seguenti valori dei parametri (in unità di misura arbitrarie): $f_F = 0.1$, quindi $T_F = 10$, $A = 1.2$ e sono stati osservati diversi regimi a seconda del valore di $\mu$, ossia il parametro che regola la nonlinearità del sistema. \\
+Si è osservato, in particolare, che per bassi valori di $\mu$ il sistema si comporta in modo regolare, mentre per alti valori di $\mu$ si osservano regimi caotici e alta sensibilità alle condizioni iniziali.
+\begin{figure}[H]
+	\centering
+	\input{Caotico4.tex}
+	\caption{Oscillatore di Van der Pol forzato con $f_F = 0.1$, $A = 1.2$ e $\mu = 6$.}
+	\label{VDPF6}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\input{Caotico2.tex}
+	\caption{Oscillatore di Van der Pol forzato con $f_F = 0.1$, $A = 1.2$ e $\mu = 8$.}
+	\label{VDPF8}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\input{VDPF8_01_Phase.tex}
+\end{figure}
+\subsubsection{Caos e sensibilità alle condizioni iniziali}
+Si è studiata una peculiarità dell'oscillatore di Van der Pol forzato: il cambiamento di regime associato ai diversi valori di $\mu$, visibile anche nelle Fig. \ref{VDPF6} e \ref{VDPF8}. \\
+Per osservare qualitativamente la caoticità dei sistemi sono stati graficati gli andamenti $x(t)$ per due condizioni iniziali $x_0$ e $x_0 + dx$ e sono stati osservati i comportamenti dei diversi regimi.
+Sono inoltre stati calcolati anche gli esponenti di Lyapunov per ottenere delle stime numeriche della caoticità dei regimi (si veda la Sez. 1.4.1).
+\begin{figure}[H]
+	\centering
+	\input{Caotico1.tex}
+	\caption{Oscillatore di Van der Pol forzato per $\mu = 6$ e due condizioni iniziali $x_0 = 2$, $x_0 + dx = 2.1$}
+	\label{VDPF6_CondIniz}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\input{Caotico3.tex}
+	\caption{Oscillatore di Van der Pol forzato per $\mu = 8$ e due condizioni iniziali $x_0 = 2$, $x_0 + dx = 2.1$}
+	\label{VDPF8_CondIniz}
+\end{figure}
+Risulta ben evidente la sensibilità alle condizioni iniziali del regime in Fig. \ref{VDPF8_CondIniz}: le due traiettorie si discostano rapidamente, al contrario di quanto accade in Fig. \ref{VDPF6_CondIniz}, in cui invece le traiettorie vanno a sovrapporsi.
 \subsection{Equazioni rigide e ordine di accuratezza}
 Un'equazione differenziale si dice rigida (o stiff) quando certi di metodi di soluzione sono numericamente instabili a meno che il passo d'integrazione sia preso estremamente piccolo. L'idea generale della definizione di rigidità è che l'equazione includa dei termini che possono portare a rapide variazioni delle soluzioni. \\ \\
 In questo caso è utile anche introdurre il concetto di ordine di accuratezza di una soluzione numerica. \\
@@ -470,6 +647,24 @@ Infine confrontiamo le traiettorie nello spazio delle fasi:
 	\input{Comp10.tex}
 \end{figure}
 Alla luce dei confronti che abbiamo appena fatto capiamo che, come atteso, il fatto che la costante di smorzamento, che in questo caso indica anche la rigidità dell'equazione, sia di un'ordine di grandezza più grande richiede anche che i timestep siano un ordine di grandezza più piccoli. Infatti, il timestep "h = 0.1", che con $\mu = 1$ dava risultati approssimativi ma comunque accettabili, con $\mu=10$ è assolutamente insufficiente e presenta lo stesso comportamento che si otteneva usando un timestep $h = 1$ con $\mu = 1$. 
+\subsection{Soluzione numerica con il metodo di Runge-Kutta }
+Il metodo di Eulero usato preliminarmente è piuttosto impreciso, in particolare vista la rigidità dell'equazione di Van Der Pol, e si vuole quindi trovare una soluzione utilizzando il metodo di Runge-Kutta del secondo ordine, che è molto più preciso. Infatti questo metodo, di solito indicato con $RK2$, ha un ordine di accuratezza 2, a differenza di Eulero che come si è verificato nella sezione precedente ha ordine di accuratezza 1. \\
+Il metodo di Runge-Kutta deriva dall'espansione in Taylor dell'equazione differenziale, dove invece che trascurare i termini di ordine superiore a $1$, come si fa nel metodo di Eulero, si considerano anche i termini di ordine $2$. \\ \\
+Per l'oscillatore di Van Der Pol si trova il seguente sistema di equazioni:
+\begin{equation}
+	\begin{cases}
+		x_{n+1} = x_n + \frac{1}{2}(k_1 + k_2) \\
+		y_{n+1} = y_n + \frac{1}{2}(l_1 + l_2)
+	\end{cases}
+\end{equation}
+dove $k_1$, $k_2$, $l_1$ e $l_2$ sono dei coefficienti definiti da
+\begin{equation}
+	k_1 = hy_n \ \ \ \ \ \ \ \ \ \ k_2 = h(y_n + l_1) 
+\end{equation}
+\begin{equation}
+	l_1 =  h\left(\mu(1-x_n^2)y _n - x_n\right) \ \ \ \ \  l_2 = h \left[\mu\left(1-(x_n + k_1)^2\right)\left(y_n + l_1\right) - (x_n + k_1)\right]
+\end{equation}
+dove $h$ è il time-step.
 \section{Circuito elettronico}
 Per realizzare un circuito che descriva l'equazione di Van Der Pol sono necessari elementi circuitali attivi che appbiano proprietà cubiche non lineare della forma
 \begin{equation}
@@ -494,56 +689,229 @@ e combinando le due equazioni di questo sistema si ottiene l'equazione differenz
 \end{equation}
 che è proprio l'equazione di Van Der Pol. Guardando bene l'equazione infatti si vede che l'ultimo termine è proprio il termine oscillativo di un circuito LC, che va a formare un oscillatore armonico elettronico di pulsazione $\omega = 1/\sqrt{LC}$. Il termine di mezzo invece è molto semplicemente riconoscibile come il termine dissipativo non lineare caratteristico dell'oscillatore di Van Der Pol. \\ \\
 Quando la costante di smorzamento $\mu$ è grande, il periodo di oscillazione dell'oscillatore è proporzionale a $\mu$, quindi il sistema ha periodo di oscillazione $T \propto \mu\sqrt{LC} = L\alpha$. Dal momento che $\alpha$ equivale all'inverso di una resistenza, si ottiene $T \propto L/r$. Il rapporto $L/R$ è la costante del tempo di rilassamento nei circuiti LR, e questo giustifica il nome "relaxation-oscillation". 
-\section{Appendice}
-\section{Bibliografia}
-1) "Modelling complex systems" \\
-2) Esponenziale rambaldi \\
-3) Oscillatore rambaldi \\
-4) Wikipedia \\
-5) Scholarpedia \\ \\ \\
-La caratteristica più importante di un neurone è la sua eccitabilità, cioè la sua capacità di depolarizzarsi e ripolarizzarsi velocemente rispetto al potenziale di membrana a riposo, producendo così un picco stretto noto come potenziale d'azione. Il potenziale di membrana è la differenza di potenziale elettrico tra l'interno e l'esterno della membrana cellulare. \\ \\
-Il miglior modello per descrivere la dinamica di un neurone eccitato è il modello di Hodgkin-Huxley. Tuttavia, nonostante questo modello sia molto preciso da un punto di vista fisiologico, esso ha diversi difetti di tipo pratico. In particolare, essendo un modello altamente non lineare, può esibire molti comportamenti caotici, che sono difficili da studiare in quattro dimensioni. Per questo motivo spesso si studia il modello di FitzHugh-Nagumo, che è più semplice e facilmente studiabile. Infatti questo modello può essere visto come la proiezione bidimensionale del modello di Hodgkin-Huxley. \\ \\
-La dinamica del modello di Fitzhugh-Nagumo è descritta da un sistema di equazioni differenziali non lineari, caratterizzate dalla presenza di due scale temporali:
+\subsection{Realizzazione di un circuito}
+Come detto precedentemente, un possibile circuito elettronico che realizza un oscillatore di Van Der Pol può essere costruito mediante un diodo a tunnel nel modo seguente 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{NotMycircuit}
+	\caption{Circuito con il diodo a tunnel.}
+\end{figure}
+Non è stato possibile realizzare questo circuito per la mancanza di diodi a tunnel, tuttavia è stato realizzato un circuito alternativo che presenta lo stesso andamento 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Mycircuit}
+	\caption{Circuito utilizzato nella simulazione su LtSpice.}
+\end{figure}
+dove si considera una resistenza variabile secondo la formula
 \begin{equation}
-	\begin{cases}
-		\varepsilon\dot{u}(t) = u(t) - \frac{u^3(t)}{3}-v(t)+I_{e}(t) \\
-		\dot{v}(t) = u(t) + a
-	\end{cases}
+	R(t) = -\frac{1}{\mu(1 - \frac{V^2(t)}{3})}
 \end{equation}
-La $u(t)$ rappresenta la variabile veloce, ovvero la variabile che cambia più velocemente, che presenta una dinamica piccata di quasi-soglia, simile al potenziale di membrana. La $v(t)$ è la variabile lenta, che si chiama variabile di recupero, e rappresenta la caratteristica refrattarietà del neurone dopo essersi eccitato. La separazione tra le due scale temporali è dettata dal parametro $\varepsilon$. $I_e$ è uno stimolo esterno, che può rappresentare le correnti date dalle interazioni con gli altri neuroni o dagli stimoli esterni. Infine $a$ è un parametro dinamico che regola il regime dinamico del modello. \\ \\
-Il sistema possiede un punto fisso $(u,v) = \left(-a,-a+\frac{a^3}{3} \right) $ che è stabile quando $|a|>1$ e diventa instabile quando $|a|<1$, e in questa condizione si presenta un ciclo limite. \\
-Il primo regime dinamico si chiama eccitabile, che è interpretabile come un neurone standard, mentre il secondo regime è il regime di "spiking tonico", che può essere interpretato come un neurone pacemaker. Per capire il meccanismo della produzione dei picchi analizziamo lo spazio delle fasi. Disegnamo le nullcline, ovvero le curve lungo le quali le derivate temporali delle rispettive variabili temporali sono nulle. La nullclina della variabile $v$ quindi è una curva verticale in $u = -a$, mentre la nullclina di $u$ è una cubila. \\
-Nel regime di spiking tonico, il ciclo limite è composto da quattro fasi:
+Questo circuito è stato realizzato su LtSpice e mediante la funzione oscilloscopio si è ottenuto il seguente andamento per la tensione:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{ltspice}
+	\caption{Andamento temporale della tensione su LtSpice.}
+\end{figure}
+che è consistento con l'andamento atteso dal modello di Van Der Pol.
+\section{Appendice}
+\subsection{Codici per la soluzione dell'equazione Van Der Pol}
+\subsubsection{Eulero}
+\begin{lstlisting}
+	void VDP1(double x0, double y0, double dt, 
+	  double mu, double T, std::string s) { 
+		double steps = T/dt;
+		double x = x0;
+		double y = y0;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		
+		for(int i = 0; i != steps; ++i) {
+			z = x + y*dt;
+			y = (mu*(1-pow(x,2))*y - x)*dt + y;
+			x = z;
+			
+			outfile << x << '\t' << y << '\n';
+		}
+		outfile.close();
+	}
+	
+	void AndTempX(double x0, double y0, double dt, 
+	  double mu, double T, std::string s) { 
+		double t = 0;
+		double steps = T/dt;
+		double x = x0;
+		double y = y0;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		
+		for(int i = 0; i != steps; ++i) {
+			z = x + y*dt;
+			y = (mu*(1-pow(x,2))*y - x)*dt + y;
+			x = z;
+			
+			outfile << t << '\t' << x << '\n';
+			t = t + dt;
+		}
+		outfile.close();
+	}
+	
+	void AndTempP(double x0, double y0, double dt, 
+	  double mu, double T, std::string s) {
+		double t = 0;
+		double steps = T/dt;
+		double x = x0;
+		double y = y0;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		
+		for(int i = 0; i != steps; ++i) {
+			z = x + y*dt;
+			y = (mu*(1-pow(x,2))*y - x)*dt + y;
+			x = z;
+			
+			outfile << t << '\t' << y << '\n';
+			t = t + dt;
+		}
+		outfile.close();
+	}
+\end{lstlisting}
+\subsubsection{Runge-Kutta}
+\begin{lstlisting}
+	void vdpRK(double x0, double y0, double h, 
+	  double mu, double T, std::string s) {
+		double steps = T/h;
+		double x = x0;
+		double y = y0;
+		double k1,k2,l1,l2;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		
+		for(int i = 0; i != steps; ++i) {
+			k1 = h*y;
+			l1 = h*(mu*(1-pow(x,2))*y - x);
+			k2 = h*(y+l1);
+			z = x + (k1 + k2)/2;
+			l2 = h*(mu*(1-pow(x+k1,2))*(y + l1*h/2) - (x+k1));
+			y = y + (l1 + l2)/2;
+			x = z;
+			
+			outfile << x << '\t' << y << '\n';
+		}
+		outfile.close();
+	}
+	
+	void xRK(double x0, double y0, double h, 
+	  double mu, double T, std::string s) {
+		double steps = T/h;
+		double x = x0;
+		double y = y0;
+		double k1,k2,l1,l2;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		outfile << 0 << '\t' << x0 << '\n';
+		
+		for(int i = 0; i != steps; ++i) {
+			k1 = h*y;
+			l1 = h*(mu*(1-pow(x,2))*y - x);
+			k2 = h*(y+l1);
+			z = x + (k1 + k2)/2;
+			l2 = h*(mu*(1-pow(x+k1,2))*(y + l1*h/2) - (x+k1));
+			y = y + (l1 + l2)/2;
+			x = z;
+			
+			outfile << (i+1)*h << '\t' << x << '\n';
+		}
+		outfile.close();
+	}
+	
+	void pRK(double x0, double y0, double h, 
+	  double mu, double T, std::string s) {
+		double steps = T/h;
+		double x = x0;
+		double y = y0;
+		double k1,k2,l1,l2;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		outfile << 0 << '\t' << y0 << '\n';
+		
+		for(int i = 0; i != steps; ++i) {
+			k1 = h*y;
+			l1 = h*(mu*(1-pow(x,2))*y - x);
+			k2 = h*(y+l1);
+			z = x + (k1 + k2)/2;
+			l2 = h*(mu*(1-pow(x+k1,2))*(y + l1*h/2) - (x+k1));
+			y = y + (l1 + l2)/2;
+			x = z;
+			
+			outfile << (i+1)*h << '\t' << y << '\n';
+		}
+		outfile.close();
+	}
+\end{lstlisting}
+\subsection{Codice per l'accoppiamento dei neuroni}
+\begin{lstlisting}
+	int main() {    
+		double x=0.65,y=-0.65,b=-0.15,d=0.15,z=0.,w=0.;
+		float h = 0.01;
+		int steps = 10000;
+		double T = 4.;
+		double e = 0.1;
+		
+		std::ofstream outfile;
+		std::ofstream outfile1;
+		outfile.open("Accop.dat");
+		outfile1.open("Accop1.dat");
+		for(int i = 0; i < steps; ++i) {
+			z = -(h/e)*(pow(x,3) - T*x + b) + x;
+			b = (x-y)*h + b;
+			x = z;
+			w = -(h/e)*(pow(y,3) - T*y + d) + y;
+			d = (y-x)*h + d;
+			y = w;
+			
+			outfile << x << '\t' << b << '\n';
+			outfile1 << y << '\t' << d << '\n';
+		}
+		outfile.close();
+		outfile1.close();
+	}
+\end{lstlisting}
+\subsection{Codice per l'oscillatore forzato}
+\begin{lstlisting}
+	void Forzato(double x0, double y0, double dt, 
+	  double mu, double T, double w,  double A, std::string s) { 
+		double steps = T/dt;
+		double x = x0;
+		double y = y0;
+		double z;
+		std::ofstream outfile;
+		outfile.open(s);
+		
+		for(int i = 0; i != steps; ++i) {
+		  z = x + y*dt;
+		  y = y - dt * (x + mu * y * (std::pow(x, 2) - 1) 
+		      - A * std::cos(w * t));
+		  x = z;
+			
+		  outfile << x << '\t' << y << '\n';
+		}
+		outfile.close();
+	}
+\end{lstlisting}
 
-1) Un lento moto in alto lungo il ramo destro della nullclina. 
-
-2) Un veloce salto verso il ramo sinistro.
-
-3) Un lento moto verso il basso lungo il ramo sinistro. 
-
-4) Un veloce salto verso il ramo sinistro.\\ \\
-Nella fase di attività tonica questi stati sono ripetuti indefinitamente. \\
-Nello stato eccitabile, il punto fisso diventa attrattivo, e il sistema non perturbato tende a raggiungerlo muovendoli lungo la nullclina cubica. \\
-Se ad esempio prendiamo $a > 1$, il punto fisso si troverà sul ramo sinistro della nullclina cubica. Se applichiamo un veloce shock positivo mediante la variabile $I_e$, il sistema si sposterà verso la direzione positiva delle $u$, e in base all'entità dello shock possono succedere due fenomeni: Se l'impulso è sotto il livello di soglia, il sistema verrà ricatturato dal ramo refrattario e continuerà a muoversi asintoticamente verso il punto fisso. Se invece l'impulso è sopra il livello di soglia, il sistema salterà verso la regione attiva, seguendola fino a raggiungere un massimo in $u = 1$, e a quel punto salterà indietro verso il ramo refrattario, riprendendo il moto asintotico. Quest'ultimo effetto prende il nome di effetto di quasi-soglia. In più, calcolando la derivata temporale di $u$ tra i rami della nullclina cubica si trova che il ramo centrale è repulsivo lungo l'asse $u$. Inoltre si trova che per ogni istante temporale in cui viene generato un potenziale d'azione, l'impulso è tale da spostare il sistema attraverso il ramo della nullclina centrale, anche se in alcuni casi in cui il sistema attraversa la nullclina, non produce nessun picco. Si capisce quindi che, almeno in prima approssimazione, l'attraversamento di una nullclina possa essere considerato un trigger per la produzione di un potenziale d'azione. \\ \\
-Si può spiegare questo comportamento dello stato eccitabile mostrando la differenza tra le scale temporali delle due variabili. Il moto lungo la variabile $u$ ha scala temporale $\varepsilon$, mentre quello lungo la variabile $v$ ha scala temporale $1$. Questo permette di considerare, approssimativamente, il moto delle due variabili separatamente: Il moto di $u$ si può considerare che avvenga per $v$ costanti, mentre quello lungo $v$ si può pensare che avvenga per valori di $u$ che sono funzione di $v$. Consideriamo prima il moto lungo $u$, che è governato dall'equazione 
-$$
-\varepsilon \dot{u} = u - \frac{u^3}{3} - \overline{v}
-$$
-dove $\overline{v}$ è il valore di $v$ che prendiamo costante. Questa equazione ha tre equilibri per $|\overline{v}|<2/3$, uno per $|\overline{v}|>2/3$ e due nel caso limite $|\overline{v}|= \pm 2/3$. Il tipo di equilibrio nei punti fissi dipende dal ramo della nullclina $u$ su cui sono posizionati. \\
-Per $|\overline{v}|<2/3$ i due punti estermi sono attrattivi, mentre quello sul ramo centrale è repulsivo. Per $|\overline{v}|>2/3$ il punto di equilibrio è attrattivo. Infine i due punti limite sono punti di sella. Possiamo ora spiegare la produzione del picco di potenziale d'azione. \\ \\
-Consideriamo un neurone quiescente, ovvero un sistema di Fitzhugh-Nagumo che si trova vicino alla dinamica globale del punto di equilibrio $(u^*,v^*)$. Dal momento che consideriamo il regime eccitabile, possiamo considerare che questo punto si trovi sul ramo destro della nullclina $u$. \\
-Forziamo ora il sistema nella direzione delle $u$ positive mediante un impulso della forma di una delta di Dirac. In base alla magnitudine di questo impulso, il sistema può fermarsi prima del punto instabile o attraversarlo. \\
-Nel primo caso il sistema viene respinto indietro verso il punto di partenza, mentre nel secondo caso viene respinto in avanti verso il punto di equilibrio stabile nel lato destro della nullclina. Una volta che il sistema raggiunge questo punto, la variabile $u$ rimane in prossimità di esso, mentre $v$ cresce secondo l'equazione
-$$
-\dot{v} = u + a
-$$ 
-dove $u$ è approssimativamente dato dalla soluzione dell'equazione
-$$
-v = u - \frac{u^3}{3}
-$$
-quindi, quando $v$ cresce, $u$ segue approssimativamente il ramo destro della nullclina. Via a via che $v$ cresce, attraversa il valore $v = 2/3$, sopra cui la dinamica della scala temporale lungo $u$ rimane improvviamente con un punto fisso nel lato sinistro della nullclina di $u$. In risposta a questo cambiamento, la dinamica di ordine $\varepsilon$ muove velocemente il sistema verso il ramo sinistro. Una volta che esso ha raggiunto la nullclina, ricomincia il moto con stala temporale $1$, questa volta verso il basso, con $u + a < 0$. \\
-Muovendosi lungo il lato sinistro della nullclina, il sistema si avvicina al punto fisso della dinamica globase, entrando di nuovo in uno stato quiescente in cui aspetta lo stimolo seguente.
-
-
+\section{Bibliografia}
+$[1]$ Boccara N. \textit{Modelling complex systems} \\
+$[2]$ Rambaldi S. \textit{Dispense sulle equazioni differenziali di primo ordine} \\
+$[3]$ Rambaldi S. \textit{Dispense sulle equazioni differenziali del secondo ordine} \\
+$[4]$ Wikipedia \textit{Van Der Pol oscillator}\\
+$[5]$ Scholarpedia \textit{Van Der Pol oscillator} \\
+$[6]$ Wikipedia \textit{FitzHugh-Nagumo model} \\
+$[7]$ Scholarpedia \textit{FitzHugh-Nagumo model} 
 
 \end{document}
